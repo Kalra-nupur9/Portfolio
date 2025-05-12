@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import ServicesSection from "./ServicesSection";
 
 const Home = () => {
-  useEffect(() => {
-    const shown = sessionStorage.getItem("welcomeToastShown");
-    if (!shown) {
-      toast.success("🎉 Welcome to the Portfolio!");
-      sessionStorage.setItem("welcomeToastShown", "true");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const shown = sessionStorage.getItem("welcomeToastShown");
+  //   if (!shown) {
+  //     toast.success("🎉 Welcome to the Portfolio!");
+  //     sessionStorage.setItem("welcomeToastShown", "true");
+  //   }
+  // }, []);
 
   return (
     <div className="bg-color">
