@@ -8,6 +8,7 @@ import zigzags from "../assets/images/userAsset/zigzags.png";
 import CV from "../assets/PDF/NK-CV.pdf";
 import plus from "../assets/images/userAsset/plus.png";
 import programming from "../assets/images/userAsset/Programming.gif";
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const typedRef = useRef<HTMLDivElement | null>(null);
@@ -78,9 +79,9 @@ const HeroSection = () => {
                 transition={{ duration: 0.6 }}
               >
                 <div className=" py-5 flex gap-2 flex-col sm:flex-row">
-                  <a href="/contactme" className="btn btn-red">
+                  <Link to="/contactme" className="btn btn-red">
                     !Contact ME!
-                  </a>
+                  </Link>
                   <a href={CV} download className="btn btn-red">
                     Download PDF
                   </a>
