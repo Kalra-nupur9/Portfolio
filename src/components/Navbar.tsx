@@ -1,11 +1,11 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { GiSkills } from "react-icons/gi";
 import { RiContactsBook3Line } from "react-icons/ri";
 import { RiCustomerService2Line } from "react-icons/ri";
-import { Link } from 'react-router-dom';
-import LogoImage from "../assets/images/logo.png"
+import { Link } from "react-router-dom";
+import LogoImage from "../assets/images/logo.png";
 function Navbar() {
   const [isClick, setisClick] = useState(false);
   const ToggleNavMenu = () => {
@@ -15,23 +15,22 @@ function Navbar() {
     <nav id="navBar" className="bg-color">
       <div className="nav-space">
         <div className="nav-bar">
-         <Link to="/" className=" ">
-            <img src={LogoImage} alt="" className="w-40 "/>
+          <Link to="/" className=" ">
+            <img src={LogoImage} alt="" className="w-40" />
           </Link>
-          
 
           <div className="hidden w-3/4 md:block">
             <div className="nav-menu">
-             <Link to="/" className="nav-item">
+              <Link to="/" className="nav-item">
                 Home
               </Link>
-             <Link to="/projects" className="nav-item">
+              <Link to="/projects" className="nav-item">
                 Projects
               </Link>
-             <Link to="/skills" className="nav-item">
+              <Link to="/skills" className="nav-item">
                 Skills
               </Link>
-             {/* <Link to="/feedback" className="nav-item">
+              {/* <Link to="/feedback" className="nav-item">
                 Feedback
               </Link>
              <Link to="/pricing" className="nav-item">
@@ -41,17 +40,14 @@ function Navbar() {
              <Link to="/faqs" className="nav-item">
                 FAQs
               </Link> */}
-             <Link to="/contactme" className="nav-item">
+              <Link to="/contactme" className="nav-item">
                 Contact Me
               </Link>
             </div>
           </div>
 
           <div className="flex items-center md:hidden">
-            <button
-              className="toggle-btn"
-              onClick={ToggleNavMenu}
-            >
+            <button className="toggle-btn" onClick={ToggleNavMenu}>
               {isClick ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,29 +79,27 @@ function Navbar() {
         </div>
       </div>
       {isClick && (
-        <div className="md:hidden  flex justify-end">
+        <div className="flex justify-end md:hidden">
           <div className="w-full -space-y-1">
-           <Link to="/" className="media-nav-items">
+            <Link to="/" className="media-nav-items">
               Home <FaHome />
             </Link>
-           <Link to="/projects" className="media-nav-items">
+            <Link to="/projects" className="media-nav-items">
               Projects <GoProjectRoadmap />
             </Link>
-           <Link to="/skills" className="media-nav-items">
+            <Link to="/skills" className="media-nav-items">
               Skills <GiSkills />
             </Link>
-           <Link to="/feedback" className="media-nav-items">
+            {/* <Link to="/feedback" className="media-nav-items">
               Feedback <RiCustomerService2Line />
-
             </Link>
-           <Link to="/pricing" className="media-nav-items">
-              Pricing   
-
+            <Link to="/pricing" className="media-nav-items">
+              Pricing
             </Link>
-           <Link to="/faqs" className="media-nav-items">
-                FAQs
-              </Link>
-           <Link to="/contactme" className="media-nav-items">
+            <Link to="/faqs" className="media-nav-items">
+              FAQs
+            </Link> */}
+            <Link to="/contactme" className="media-nav-items">
               Contact Me <RiContactsBook3Line />
             </Link>
           </div>
