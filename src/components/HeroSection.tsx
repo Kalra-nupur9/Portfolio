@@ -80,7 +80,7 @@ const HeroSection = () => {
               >
                 <div className=" py-5 flex gap-2 flex-col sm:flex-row">
                   <Link to="/contactme" className="btn btn-red">
-                    !Contact ME!
+                    Contact ME
                   </Link>
                   <a href={CV} download className="btn btn-red">
                     Download PDF

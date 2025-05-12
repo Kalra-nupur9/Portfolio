@@ -64,7 +64,7 @@
 }
 
 .btn-white::before {
-  @apply bg-main-red absolute inset-0 z-[-1] scale-x-0 rounded-full transition-transform duration-500;
+  @apply bg-main-red absolute inset-0 z-[-1] scale-x-0 rounded-md transition-transform duration-500;
   content: "";
 }
 
@@ -73,7 +73,7 @@
 }
 
 .btn-blue::before {
-  @apply absolute inset-0 z-[-1] scale-x-0 rounded-full bg-blue-500 transition-transform duration-500;
+  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-blue-500 transition-transform duration-500;
   content: "";
 }
 .btn:hover::before {
@@ -94,7 +94,7 @@
   @apply ml-4 flex items-center justify-end space-x-10;
 }
 .nav-item {
-  @apply hover:text-main-red cursor-pointer text-lg font-light text-black;
+  @apply hover:text-main-red cursor-pointer text-lg font-lg text-black;
 }
 .media-nav-items {
   @apply flex items-center gap-2 border-2 bg-white px-5 py-4 text-xl font-medium text-black;
