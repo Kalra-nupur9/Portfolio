@@ -3,7 +3,7 @@
 // import { FaLinkedin } from "react-icons/fa";
 // import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import FootLogo from "../assets/images/Logo.png";
+import FootLogo from "../assets/images/footLogo.png";
 
 const Footer = () => {
   return (
