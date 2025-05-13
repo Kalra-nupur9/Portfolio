@@ -305,7 +305,7 @@ hr {
 /* Contact Forms */
 
 .contact-div {
-  @apply border-pink-light mx-auto flex w-full flex-col rounded-3xl border bg-white shadow-xl sm:w-[90%] sm:flex-row;
+  @apply  mx-auto flex w-full flex-col rounded-3xl  bg-white shadow-xl sm:w-[90%] sm:flex-row;
 }
 .detail-box {
   @apply to-blue-dark text-pink-light from-main-red flex w-full flex-col justify-between gap-15 rounded-3xl bg-linear-to-br p-3 sm:w-[50%] sm:p-8;
