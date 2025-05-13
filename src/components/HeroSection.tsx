@@ -51,8 +51,10 @@ const HeroSection = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h1>
-                  Hello, I’m <span>NUPUR KALRA</span>
+                  Hello, I’m 
+                  
                 </h1>
+                <h5 className="h5">NUPUR KALRA</h5>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}

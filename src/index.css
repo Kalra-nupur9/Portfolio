@@ -2,7 +2,7 @@
 
 @theme {
   --color-card-bg: #fed4d9;
-  --color-main-red: #e42c5c;
+  --color-main-red: #ff5c8d;
   --color-blue-dark: #432dd7;
   
 
@@ -26,7 +26,7 @@
 
 /* BackGround color */
 .bg-color {
-  @apply bg-linear-to-r from-pink-300 via-white to-rose-300;
+  @apply bg-linear-to-r from-pink-300 via-white to-[#fcf0f7] ;
 }
 .heading-section {
   @apply py-4 text-center;
@@ -151,11 +151,11 @@
   @apply mr-auto place-self-center lg:col-span-7;
 }
 .introduction-div h1 {
-  @apply mb-4 max-w-3xl text-4xl leading-none font-bold tracking-tight md:text-5xl xl:text-6xl;
+  @apply  max-w-3xl text-4xl leading-none font-bold tracking-tight md:text-5xl xl:text-6xl;
 }
 
-.introduction-div h1 span {
-  @apply text-main-red text-center text-4xl font-semibold sm:text-7xl md:text-6xl;
+.h5{
+  @apply  bg-gradient-to-r from-main-red  to-blue-dark inline-block text-transparent bg-clip-text text-center text-4xl font-semibold sm:text-8xl md:text-7xl ;
 }
 
 .typed {
@@ -258,7 +258,7 @@ hr {
   @apply flex justify-center lg:col-span-5;
 }
 .stack {
-  @apply grid grid-cols-3 gap-6 sm:grid-cols-4 sm:gap-9 md:grid-cols-4 lg:grid-cols-4;
+  @apply grid grid-cols-4 px-5 sm:px-0 gap-6 sm:grid-cols-4 sm:gap-9 md:grid-cols-4 lg:grid-cols-4;
 }
 .icon-div {
   @apply flex h-full transform flex-col items-center justify-center transition duration-300 hover:rotate-x-25 hover:rotate-z-30;
