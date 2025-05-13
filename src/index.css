@@ -94,10 +94,10 @@
   @apply ml-4 flex items-center justify-end space-x-10;
 }
 .nav-item {
-  @apply hover:text-main-red cursor-pointer text-lg font-lg text-black;
+  @apply hover:text-main-red cursor-pointer text-lg text-black;
 }
 .media-nav-items {
-  @apply flex items-center gap-2 border-2 bg-white px-5 py-4 text-xl font-medium text-black;
+  @apply flex items-center gap-2 border border-main-red/15 bg-pink-100 px-5 py-4 text-xl font-medium text-black;
 }
 .toggle-btn {
   @apply inline-flex items-center justify-center rounded-md p-2 text-black;

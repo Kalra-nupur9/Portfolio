@@ -1,8 +1,8 @@
-import  { useEffect } from 'react';
-import { toast } from 'react-toastify';
+// import  { useEffect } from 'react';
+// import { toast } from 'react-toastify';
 import HeroSection from "../components/HeroSection";
 import CallOnAction from "../components/CallToAction";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import ServicesSection from "./ServicesSection";
 
 const Home = () => {

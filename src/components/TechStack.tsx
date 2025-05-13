@@ -19,10 +19,8 @@ interface TechItem {
 
 const TechStack: React.FC = () => {
   const techStack: TechItem[] = [
-    { name: "Figma", icon: <SiFigma className="text-main-red text-6xl" /> },
-    { name: "HTML", icon: <FaHtml5 className="text-6xl text-orange-600" /> },
-    { name: "CSS", icon: <FaCss3Alt className="text-6xl text-blue-500" /> },
-    { name: "JavaScript", icon: <FaJs className="text-6xl text-yellow-500" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-6xl text-black" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-6xl text-green-600" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-6xl text-green-500" /> },
     { name: "React", icon: <FaReact className="text-6xl text-blue-400" /> },
     { name: "Git", icon: <FaGitAlt className="text-6xl text-orange-500" /> },
@@ -30,10 +28,12 @@ const TechStack: React.FC = () => {
     { name: "Express", icon: <SiExpress className="text-6xl text-gray-500" /> },
     { name: "Tailwind", icon: <SiTailwindcss className="text-6xl text-cyan-300" /> },
     { name: "Bootstrap", icon: <SiBootstrap className="text-6xl text-indigo-500" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="text-6xl text-black" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-6xl text-green-600" /> },
     { name: "Redux", icon: <SiRedux className="text-6xl text-purple-600" /> },
     { name: "Vercel", icon: <SiVercel className="text-6xl text-black" /> },
+    { name: "Figma", icon: <SiFigma className="text-main-red text-6xl" /> },
+    { name: "HTML", icon: <FaHtml5 className="text-6xl text-orange-600" /> },
+    { name: "CSS", icon: <FaCss3Alt className="text-6xl text-blue-500" /> },
+    { name: "JavaScript", icon: <FaJs className="text-6xl text-yellow-500" /> },
   ];
 
   return (

@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { GiSkills } from "react-icons/gi";
 import { RiContactsBook3Line } from "react-icons/ri";
-import { RiCustomerService2Line } from "react-icons/ri";
+// import { RiCustomerService2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import LogoImage from "../assets/images/logo.png";
 function Navbar() {
@@ -78,33 +78,26 @@ function Navbar() {
           </div>
         </div>
       </div>
-      {isClick && (
-        <div className="flex justify-end md:hidden">
-          <div className="w-full -space-y-1">
-            <Link to="/" className="media-nav-items">
-              Home <FaHome />
-            </Link>
-            <Link to="/projects" className="media-nav-items">
-              Projects <GoProjectRoadmap />
-            </Link>
-            <Link to="/skills" className="media-nav-items">
-              Skills <GiSkills />
-            </Link>
-            {/* <Link to="/feedback" className="media-nav-items">
-              Feedback <RiCustomerService2Line />
-            </Link>
-            <Link to="/pricing" className="media-nav-items">
-              Pricing
-            </Link>
-            <Link to="/faqs" className="media-nav-items">
-              FAQs
-            </Link> */}
-            <Link to="/contactme" className="media-nav-items">
-              Contact Me <RiContactsBook3Line />
-            </Link>
-          </div>
-        </div>
-      )}
+      <div
+  className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+    isClick ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+  }`}
+>
+  <div className="w-full -space-y-1 px-4 pb-4 pt-2">
+    <Link to="/" className="media-nav-items" onClick={() => setisClick(false)}>
+      Home
+    </Link>
+    <Link to="/projects" className="media-nav-items" onClick={() => setisClick(false)}>
+      Projects
+    </Link>
+    <Link to="/skills" className="media-nav-items" onClick={() => setisClick(false)}>
+      Skills
+    </Link>
+    <Link to="/contactme" className="media-nav-items" onClick={() => setisClick(false)}>
+      Contact Me
+    </Link>
+  </div>
+</div>
     </nav>
   );
 }
