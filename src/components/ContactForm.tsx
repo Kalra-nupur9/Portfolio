@@ -40,7 +40,7 @@ if (!emailRegex.test(formData.email)) {
 
 Swal.fire({
   title: "Details Submitted!",
-  text: "Thank you for reaching out! You will receive a call or email from us soon. For urgent matters, please call the given number.",
+  text: "Thank you for reaching out! You will receive a call or email from us soon. For urgent matters, please Mail on the given email.",
   icon: "success",
   confirmButtonText: "OK",
 });
@@ -52,7 +52,7 @@ return (
 <>
 
 
-  <form onSubmit={handleSubmit} className="contact-div">
+  <form onSubmit={handleSubmit} className="">
     
     <div className="flex flex-col gap-4 sm:flex-row">
       <div className="w-full">
@@ -70,7 +70,7 @@ return (
       </div>
     </div>
 
-    <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+    <div className="mt-2 flex flex-col gap-2 ">
       <div className="w-full">
         <label className="label">Email</label>
         <input
@@ -98,7 +98,7 @@ return (
       </div>
     </div>
 
-    <div className="mt-4">
+    <div className="mt-2">
       <label className="label">Message</label>
       <textarea
         name="message"

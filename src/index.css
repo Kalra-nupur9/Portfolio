@@ -4,7 +4,7 @@
   --color-card-bg: #fed4d9;
   --color-main-red: #ff5c8d;
   --color-blue-dark: #432dd7;
-  
+  --color-pink-light: #fcf0f7;
 
   --tracking-tightest_2: -0.3em;
   --tracking-tightest: -0.2em;
@@ -18,15 +18,13 @@
   --font-globle: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
-
 * {
   @apply font-globle;
 }
 
 /* BackGround color */
 .bg-color {
-  @apply bg-linear-to-r from-pink-300 via-white to-[#fcf0f7] ;
+  @apply to-pink-light bg-linear-to-r from-pink-300 via-white;
 }
 .heading-section {
   @apply py-4 text-center;
@@ -85,10 +83,10 @@
   @apply tracking-tightest from-main-red bg-linear-to-r to-pink-300 bg-clip-text pr-5 text-8xl text-transparent hover:text-pink-500;
 }
 .nav-bar {
-  @apply flex h-16 items-center justify-between ;
+  @apply flex h-16 items-center justify-between;
 }
 .nav-space {
-  @apply mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8 ;
+  @apply mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8;
 }
 .nav-menu {
   @apply ml-4 flex items-center justify-end space-x-10;
@@ -97,7 +95,7 @@
   @apply hover:text-main-red cursor-pointer text-lg text-black;
 }
 .media-nav-items {
-  @apply flex items-center gap-2 border border-main-red/15 bg-pink-100 px-5 py-4 text-xl font-medium text-black;
+  @apply border-main-red/15 flex items-center gap-2 border bg-pink-100 px-5 py-4 text-xl font-medium text-black;
 }
 .toggle-btn {
   @apply inline-flex items-center justify-center rounded-md p-2 text-black;
@@ -151,11 +149,11 @@
   @apply mr-auto place-self-center lg:col-span-7;
 }
 .introduction-div h1 {
-  @apply  max-w-3xl text-4xl leading-none font-bold tracking-tight md:text-5xl xl:text-6xl;
+  @apply max-w-3xl text-4xl leading-none font-bold tracking-tight md:text-5xl xl:text-6xl;
 }
 
-.h5{
-  @apply  bg-gradient-to-r from-main-red  to-blue-dark inline-block text-transparent bg-clip-text text-center text-4xl font-semibold sm:text-8xl md:text-7xl ;
+.h5 {
+  @apply from-main-red to-blue-dark inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-8xl md:text-7xl;
 }
 
 .typed {
@@ -185,7 +183,7 @@
 }
 
 hr {
-  @apply border-main-red my-2 flex w-1/4 justify-self-center border-2 ;
+  @apply border-main-red my-2 flex w-1/4 justify-self-center border-2;
 }
 
 /* Call on Action */
@@ -258,7 +256,7 @@ hr {
   @apply flex justify-center lg:col-span-5;
 }
 .stack {
-  @apply grid grid-cols-4 px-5 sm:px-0 gap-6 sm:grid-cols-4 sm:gap-9 md:grid-cols-4 lg:grid-cols-4;
+  @apply grid grid-cols-4 gap-6 px-5 sm:grid-cols-4 sm:gap-9 sm:px-0 md:grid-cols-4 lg:grid-cols-4;
 }
 .icon-div {
   @apply flex h-full transform flex-col items-center justify-center transition duration-300 hover:rotate-x-25 hover:rotate-z-30;
@@ -307,21 +305,29 @@ hr {
 /* Contact Forms */
 
 .contact-div {
-  @apply mx-auto max-w-2xl space-y-4 rounded-lg bg-white p-6 shadow-xl;
+  @apply border-pink-light mx-auto flex w-full flex-col rounded-3xl border bg-white shadow-xl sm:w-[90%] sm:flex-row;
 }
-
+.detail-box {
+  @apply to-blue-dark text-pink-light from-main-red flex w-full flex-col justify-between gap-15 rounded-3xl bg-linear-to-br p-3 sm:w-[50%] sm:p-8;
+}
+.detail-heading {
+  @apply text-pink-light text-3xl sm:text-4xl;
+}
+.contact-icon {
+  @apply bg-pink-light/30 text-pink-light rounded-full p-1 text-3xl sm:p-2 sm:text-4xl;
+}
 .contact-detail {
   @apply flex flex-col items-center sm:flex-row;
 }
-.contact-icon {
-  @apply text-main-red text-4xl;
+.contact-box {
+  @apply flex flex-col justify-evenly gap-4;
 }
 
 .label {
   @apply text-lg font-medium text-pink-600;
 }
 .input-form {
-  @apply w-full rounded-lg bg-pink-100 border border-pink-300 px-4 py-2 focus:ring-2 focus:ring-pink-500;
+  @apply bg-pink-light w-full rounded-lg border border-pink-300 px-4 py-2 focus:ring-2 focus:ring-pink-500;
 }
 
 .error-container {

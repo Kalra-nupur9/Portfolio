@@ -15,23 +15,23 @@ const ContactMe = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="heading-section">
+          {/* <div className="heading-section">
             <h1 className="h1">CONTACT ME</h1>
             <h3 className="h3"> Questions, Thoughts, Or Just Want to Say Hello?</h3>
-          </div>
+          </div> */}
         </motion.div>
 
         <div className="items-top flex w-full flex-col justify-evenly gap-4 sm:flex-row">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div>
+                <ContactDetails />
+              </div>
+            </motion.div>
           {/* <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div>
-              <ContactDetails />
-            </div>
-          </motion.div> */}
-          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -40,7 +40,7 @@ const ContactMe = () => {
             
             <ContactForm />
           </div>
-          </motion.div>
+          </motion.div> */}
          
         </div>
       </motion.div>
