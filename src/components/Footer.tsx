@@ -1,6 +1,6 @@
 // import { FaInstagram } from "react-icons/fa";
 // import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
 // import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import FootLogo from "../assets/images/footLogo.png";
@@ -12,13 +12,13 @@ const Footer = () => {
         <div className="footer-container">
           {/* Links */}
           <div className="footer-menu">
-            <Link to="/">Home</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/skills">Skills</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
+            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>Projects</Link>
+            <Link to="/skills" onClick={() => window.scrollTo(0, 0)}>Skills</Link>
             {/*<Link to="/feedback ">Feedback</Link>
                <Link to="/pricing ">Pricing</Link>
                 <Link to="/faqs ">FAQs</Link> */}
-            <Link to="/contactme">Contact Me</Link>
+            <Link to="/contactme" onClick={() => window.scrollTo(0, 0)}>Contact Me</Link>
           </div>
 
           {/* socials */}
