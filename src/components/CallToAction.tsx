@@ -13,7 +13,7 @@ const CallToAction = () => {
   };
 
   // triggered when the form is submitted
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     // prevents the default form submission
     e.preventDefault();
 
@@ -25,7 +25,22 @@ const CallToAction = () => {
     }
 
 
-    toast.success("Your email has been submitted! Please wait, I'll contact you via email. Soon <3");
+    try {
+    const res = await fetch("http://localhost:5000/submit-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
+    if (res.ok) {
+      toast.success("Email saved! I’ll contact you soon.");
+      setEmail("");
+    } else {
+      toast.error("Something went wrong, try again later.");
+    }
+  } catch (err) {
+    toast.error("Server not responding");
+  }
 
     // reset to an empty string.
     setEmail("");

@@ -11,8 +11,13 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
+    "@vercel/node": "^5.1.16",
     "framer-motion": "^12.6.3",
+    "install": "^0.13.0",
     "lucide-react": "^0.483.0",
+    "mongoose": "^8.14.3",
+    "nodemailer": "^7.0.3",
+    "npm": "^11.3.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.3",
     "react": "^19.0.0",
