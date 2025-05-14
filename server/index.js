@@ -25,6 +25,8 @@ app.use("/api/contact", contactRoutes);
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
+const emailRoutes = require("./routes/email");
+app.use("/", emailRoutes); // 👈 this makes /submit-email work
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
