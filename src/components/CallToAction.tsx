@@ -25,7 +25,7 @@ const CallToAction = () => {
 
     try {
       
-      const res = await fetch("https://portfolio-backend-0gej.onrender.com/submit-email", {
+      const res = await fetch("https://portfolio-backend-0gej.onrender.com/submitEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
