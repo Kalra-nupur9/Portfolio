@@ -24,11 +24,12 @@ const CallToAction = () => {
     }
 
     try {
+      
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/submit-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
-      });
+      }); 
 
       if (res.ok) {
         toast.success("Email saved! I’ll contact you soon.");
