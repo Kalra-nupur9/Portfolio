@@ -4,7 +4,7 @@ const Email = require("../models/Email");
 
 // @route   POST /submit-email
 // @desc    Save an email entry
-router.post("/submitEmail", async (req, res) => {
+router.post("/submit-email", async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
