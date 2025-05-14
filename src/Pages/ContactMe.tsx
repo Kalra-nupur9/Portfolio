@@ -1,5 +1,5 @@
 import ContactDetails from "../components/ContactDetails";
-import ContactForm from "../components/ContactForm";
+// import ContactForm from "../components/ContactForm";
 import { motion } from "framer-motion";
 const ContactMe = () => {
   return (

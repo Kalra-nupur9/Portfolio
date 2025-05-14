@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const CallToAction = () => {
   const [email, setEmail] = useState<string>("");
@@ -20,27 +19,26 @@ const CallToAction = () => {
     if (!isValidEmail(email)) {
       // error alert
       toast.error("Please Check the Email is not Correct!");
-    
+
       return;
     }
 
-
     try {
-    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/submit-email`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/submit-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
 
-    if (res.ok) {
-      toast.success("Email saved! I’ll contact you soon.");
-      setEmail("");
-    } else {
-      toast.error("Something went wrong, try again later.");
+      if (res.ok) {
+        toast.success("Email saved! I’ll contact you soon.");
+        setEmail("");
+      } else {
+        toast.error("Something went wrong, try again later.");
+      }
+    } catch (err) {
+      toast.error("Server not responding");
     }
-  } catch (err) {
-    toast.error("Server not responding");
-  }
 
     // reset to an empty string.
     setEmail("");

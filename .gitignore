@@ -23,5 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
+# Local environment files
+.env
+.env.*          # For .env.development, etc.
 server/.env
-
