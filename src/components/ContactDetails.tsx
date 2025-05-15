@@ -24,9 +24,9 @@ const ContactDetails = () => {
               <MdOutlineMail className="contact-icon" />{" "}
               <div>
                 <p className="text-sm opacity-60">Email</p>
-                <a href="" className="text-sm">
-                  kalranupur6@gmail.com
-                </a>
+                <p className="text-sm">
+                  nupurk.work@gmail.com
+                </p>
               </div>
             </div>
             {/* <div className="flex items-center gap-4">
@@ -42,9 +42,9 @@ const ContactDetails = () => {
               <FaLinkedin className="contact-icon" />{" "}
               <div>
                 <p className="text-sm opacity-60">Linkedin</p>
-                <a href="" target="" className="text-sm">
+                <p className="text-sm">
                   nupur-kalra-122193287
-                </a>
+                </p>
               </div>
             </div>
           </div>
