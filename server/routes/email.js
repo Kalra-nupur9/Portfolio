@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Email = require("../models/Email");
 
-// @route   POST /submit-email
-// @desc    Save an email entry
+
 router.post("/submit-email", async (req, res) => {
   const { email } = req.body;
 
