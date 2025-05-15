@@ -51,10 +51,10 @@
   @apply relative z-10 my-5 w-full overflow-hidden rounded-md px-5 py-3 text-center text-base font-medium shadow-lg transition-all duration-500 sm:w-full md:w-auto lg:w-auto;
 }
 .btn-red {
-  @apply bg-main-red text-white hover:text-black;
+  @apply bg-main-red text-white hover:text-black focus:ring-2 focus:outline-none focus:ring-pink-900;
 }
 .btn-red::before {
-  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-white transition-transform duration-500;
+  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-white transition-transform duration-500  ;
   content: "";
 }
 .btn-white {
@@ -67,11 +67,11 @@
 }
 
 .btn-blue {
-  @apply bg-blue-dark text-white hover:text-white;
+  @apply bg-blue-dark text-white hover:text-white  focus:ring-2 focus:outline-none focus:ring-pink-500;
 }
 
 .btn-blue::before {
-  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-blue-500 transition-transform duration-500;
+  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-blue-500 transition-transform duration-500 ;
   content: "";
 }
 .btn:hover::before {

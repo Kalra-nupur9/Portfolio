@@ -10,13 +10,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Feedback from "./Pages/Feedback";
 
-import Faqs from "./Pages/Faqs";
-import Pricing from "./components/Pricing";
+// import Faqs from "./Pages/Faqs";
+// import Pricing from "./components/Pricing";
 import NotFound from "./Pages/NotFound";
 import FeedbackAdmin from "./Pages/FeedbackAdmin";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AddFeedback from "./Pages/AddFeedback";
+// import AddFeedback from "./Pages/AddFeedback";
 
 function App() {
   return (
