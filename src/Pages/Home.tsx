@@ -20,8 +20,8 @@ const Home = () => {
      
       <hr />
       <ServicesSection />
-      <hr />
-      <CallOnAction />
+      {/* <hr />
+      <CallOnAction /> */}
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Project = () => {
           <div key={project.id} className="project-card">
             <div className="project-Sr-No">{project.id}</div>
             <img src={project.image} alt={project.name} className="project-img" />
-            <div className="z-10 p-5">
+            <div className="z-10 p-5 flex flex-col flex-grow">
               <div className="heading-section">
                 <h3 className="h3">{project.name}</h3>
               </div>
@@ -15,6 +15,7 @@ const Project = () => {
               <p className="para project-details">
                 {project.description}
               </p>
+               <div className="flex-grow" />
               <div className="project-tec">
                 {project.techStack}
               </div>

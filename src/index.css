@@ -35,12 +35,19 @@
 .h2 {
   @apply text-3xl text-pink-600 sm:text-4xl md:text-5xl;
 }
+.h2-Light {
+  @apply text-3xl text-pink-light sm:text-4xl md:text-5xl;
+}
 .h3 {
   @apply text-3xl text-pink-500;
 }
 
 .para {
   @apply text-justify text-base font-light text-gray-600 sm:text-lg;
+}
+
+.para-contact {
+  @apply text-justify text-sm font-light text-pink-light  sm:text-base;
 }
 
 /* button */
@@ -206,7 +213,7 @@ hr {
   @apply mt-3 text-2xl text-green-600;
 }
 .quote {
-  @apply text-blue-dark text-2xl italic;
+  @apply text-pink-light/50 text-2xl italic;
 }
 
 /* ClientFeedback.tsx*/
@@ -232,7 +239,7 @@ hr {
   @apply grid gap-10 p-5 sm:grid-cols-2 sm:px-15 md:grid-cols-3;
 }
 .project-card {
-  @apply relative overflow-hidden rounded-2xl bg-pink-50 shadow-lg transition-transform duration-500 hover:scale-105;
+  @apply flex flex-col h-full border border-pink-800/10 relative overflow-hidden rounded-2xl bg-pink-50 shadow-lg transition-transform duration-500 hover:scale-105;
 }
 .project-Sr-No {
   @apply absolute top-2 rounded-r-full bg-pink-600 px-10 py-4 text-2xl text-white opacity-60;
@@ -241,10 +248,10 @@ hr {
   @apply h-60 w-full shadow-lg;
 }
 .project-details {
-  @apply flex h-14 items-center justify-center overflow-hidden text-base;
+  @apply flex  min-h-[72px] pb-2 items-center justify-center overflow-hidden text-base;
 }
 .project-tec {
-  @apply mt-4 flex h-24 flex-wrap items-center justify-center gap-5;
+  @apply mt-auto flex flex-wrap items-center justify-center gap-5;
 }
 
 /* skills */

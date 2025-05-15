@@ -9,7 +9,15 @@ const ContactDetails = () => {
       <div className="contact-div">
         <div className="detail-box">
           <div className="space-y-4">
-            <h1 className="detail-heading">Questions, Thoughts, Or Just Want to Say Hello?</h1>
+           <h2 className="h2-Light">Let’s Connect & Build Something Amazing! </h2>
+                    <p className="para-contact max-w-3xl ">
+                      Whether you need a stunning website, a seamless user experience, or expert web
+                      development services, I'm here to help. Drop your email, and I'll reach
+                      out to discuss how we can turn your vision into reality.{" "}
+                    </p>
+                     <p className="quote">
+                    "Great things start with a simple conversation. Let’s talk!"
+                  </p>
           </div>
           <div className="contact-box">
             <div className="flex items-center gap-4">
