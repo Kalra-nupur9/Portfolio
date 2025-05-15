@@ -35,7 +35,7 @@ const ContactForm = () => {
     }
 
     try {
-      const res = await fetch("https://portfolio-backend-0gej.onrender.com/api/contact", {
+      const res = await fetch("https://portfolio-backend-0gej.onrender.com/api/ ", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
