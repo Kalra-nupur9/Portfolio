@@ -24,7 +24,7 @@ mongoose
 const contactRoutes = require("./routes/contact");
 app.use("/api/contact", contactRoutes);
 
-app.post("/submit-email", async (req, res) => {
+app.post("/api/submit-email", async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
