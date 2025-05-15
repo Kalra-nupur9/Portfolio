@@ -49,7 +49,7 @@ const ServicesSection = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1 }}
       >
-        <h2 className="heading-section h1">Services</h2>
+        <h2 className="heading-section h1">Here’s What I Do</h2>
 
         <div className="grid gap-6 p-4 sm:p-10 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (

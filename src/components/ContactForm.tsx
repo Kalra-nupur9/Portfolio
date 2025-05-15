@@ -25,52 +25,51 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-  try {
-    const res = await fetch("https://portfolio-backend-0gej.onrender.com/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.Name,
-        email: formData.email,
-        contactNumber: formData.contactNumber,
-        message: formData.message,
-      }),
-    });
+    try {
+      const res = await fetch("https://portfolio-backend-0gej.onrender.com/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.Name,
+          email: formData.email,
+          contactNumber: formData.contactNumber,
+          message: formData.message,
+        }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (!res.ok) throw new Error(data.error || "Something went wrong");
+      if (!res.ok) throw new Error(data.error || "Something went wrong");
 
-    Swal.fire({
-      title: "Details Submitted!",
-      text: "Thank you for reaching out! You will receive a call or email from us soon.",
-      icon: "success",
-      confirmButtonText: "OK",
-    });
+      Swal.fire({
+        title: "Details Submitted!",
+        text: "Thank you for reaching out! You will receive a call or email from us soon.",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
 
-    setFormData({ Name: "", email: "", contactNumber: "", message: "" });
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    Swal.fire({
-      title: "Oops!",
-      text: "Something went wrong while submitting the form.",
-      icon: "error",
-      confirmButtonText: "Try Again",
-    });
-  }
-};
-
+      setFormData({ Name: "", email: "", contactNumber: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      Swal.fire({
+        title: "Oops!",
+        text: "Something went wrong while submitting the form.",
+        icon: "error",
+        confirmButtonText: "Try Again",
+      });
+    }
+  };
 
   return (
     <>
