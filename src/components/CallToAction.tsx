@@ -78,8 +78,8 @@ const CallToAction = () => {
                     <h2 className="h2">Let’s Connect & Build Something Amazing! </h2>
                     <p className="para max-w-3xl">
                       Whether you need a stunning website, a seamless user experience, or expert web
-                      development services, I'm here to help. Drop your email, and I'll reach
-                      out to discuss how we can turn your vision into reality.{" "}
+                      development services, I'm here to help. Drop your email, and I'll reach out to
+                      discuss how we can turn your vision into reality.{" "}
                     </p>
                   </header>
 

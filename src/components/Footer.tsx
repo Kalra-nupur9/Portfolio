@@ -12,13 +12,21 @@ const Footer = () => {
         <div className="footer-container">
           {/* Links */}
           <div className="footer-menu">
-            <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
-            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>Projects</Link>
-            <Link to="/skills" onClick={() => window.scrollTo(0, 0)}>Skills</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+              Home
+            </Link>
+            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+              Projects
+            </Link>
+            <Link to="/skills" onClick={() => window.scrollTo(0, 0)}>
+              Skills
+            </Link>
             {/*<Link to="/feedback ">Feedback</Link>
                <Link to="/pricing ">Pricing</Link>
                 <Link to="/faqs ">FAQs</Link> */}
-            <Link to="/contactme" onClick={() => window.scrollTo(0, 0)}>Contact Me</Link>
+            <Link to="/contactme" onClick={() => window.scrollTo(0, 0)}>
+              Contact Me
+            </Link>
           </div>
 
           {/* socials */}

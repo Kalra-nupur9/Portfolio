@@ -79,25 +79,25 @@ function Navbar() {
         </div>
       </div>
       <div
-  className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-    isClick ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-  }`}
->
-  <div className="w-full -space-y-1 px-4 pb-4 pt-2">
-    <Link to="/" className="media-nav-items" onClick={() => setisClick(false)}>
-      Home
-    </Link>
-    <Link to="/projects" className="media-nav-items" onClick={() => setisClick(false)}>
-      Projects
-    </Link>
-    <Link to="/skills" className="media-nav-items" onClick={() => setisClick(false)}>
-      Skills
-    </Link>
-    <Link to="/contactme" className="media-nav-items" onClick={() => setisClick(false)}>
-      Contact Me
-    </Link>
-  </div>
-</div>
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+          isClick ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="w-full -space-y-1 px-4 pt-2 pb-4">
+          <Link to="/" className="media-nav-items" onClick={() => setisClick(false)}>
+            Home
+          </Link>
+          <Link to="/projects" className="media-nav-items" onClick={() => setisClick(false)}>
+            Projects
+          </Link>
+          <Link to="/skills" className="media-nav-items" onClick={() => setisClick(false)}>
+            Skills
+          </Link>
+          <Link to="/contactme" className="media-nav-items" onClick={() => setisClick(false)}>
+            Contact Me
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }

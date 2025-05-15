@@ -8,7 +8,7 @@ import zigzags from "../assets/images/userAsset/zigzags.png";
 import CV from "../assets/PDF/NK-CV.pdf";
 import plus from "../assets/images/userAsset/plus.png";
 import programming from "../assets/images/userAsset/Programming.gif";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const typedRef = useRef<HTMLDivElement | null>(null);
@@ -18,11 +18,11 @@ const HeroSection = () => {
       const typed = new Typed(typedRef.current, {
         strings: [
           "Full Stack Developer",
-           "Web Developer",
-           "UI/UX Designer",
-           "Backend Developer",
-           "Frontend Specialist",
-           "Problem Solver",
+          "Web Developer",
+          "UI/UX Designer",
+          "Backend Developer",
+          "Frontend Specialist",
+          "Problem Solver",
         ],
         loop: true,
         typeSpeed: 100,
@@ -50,10 +50,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1>
-                  Hello, I’m 
-                  
-                </h1>
+                <h1>Hello, I’m</h1>
                 <h5 className="h5">NUPUR KALRA</h5>
               </motion.div>
               <motion.div
@@ -80,7 +77,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className=" py-5 flex gap-2 flex-col sm:flex-row">
+                <div className="flex flex-col gap-2 py-5 sm:flex-row">
                   <Link to="/contactme" className="btn btn-red">
                     Contact ME
                   </Link>

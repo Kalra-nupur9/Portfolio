@@ -102,7 +102,7 @@
   @apply hover:text-main-red cursor-pointer text-lg text-black;
 }
 .media-nav-items {
-  @apply border-main-red/15 flex items-center gap-2 border bg-pink-100 px-5 py-4 text-xl font-medium text-black;
+  @apply border-main-red/15 flex items-center gap-2 border bg-pink-100 px-5 py-4 text-base font-medium text-black;
 }
 .toggle-btn {
   @apply inline-flex items-center justify-center rounded-md p-2 text-black;
@@ -160,7 +160,7 @@
 }
 
 .h5 {
-  @apply from-main-red to-blue-dark inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-8xl md:text-7xl;
+  @apply from-main-red to-blue-dark inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
 }
 
 .typed {
