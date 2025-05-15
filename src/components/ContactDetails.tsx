@@ -43,7 +43,7 @@ const ContactDetails = () => {
               <div>
                 <p className="text-sm opacity-60">Linkedin</p>
                 <p className="text-sm">
-                  nupur-kalra-122193287
+                  https://www.linkedin.com/in/nupur-kalra-122193287/
                 </p>
               </div>
             </div>
