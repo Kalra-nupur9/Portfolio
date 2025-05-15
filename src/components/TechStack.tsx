@@ -9,6 +9,7 @@ import {
   SiVercel,
   SiBootstrap,
   SiFigma,
+  SiRender,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -34,6 +35,7 @@ const TechStack: React.FC = () => {
     { name: "HTML", icon: <FaHtml5 className="text-6xl text-orange-600" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-6xl text-blue-500" /> },
     { name: "JavaScript", icon: <FaJs className="text-6xl text-yellow-500" /> },
+    { name: "Render", icon: <SiRender className="text-2xl text-black sm:text-3xl" /> },
   ];
 
   return (

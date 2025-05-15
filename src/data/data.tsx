@@ -6,7 +6,9 @@ import {
   SiVercel,
   SiBootstrap,
   SiFigma,
+  SiRender,
 } from "react-icons/si";
+
 import techsetGo from "../assets/images/projects/techsetGo.png";
 import passwordManager from "../assets/images/projects/PasswordManager.png";
 import docMaster from "../assets/images/projects/Project1.png";
@@ -46,6 +48,7 @@ export const projects: Project[] = [
       <SiVercel className="text-2xl text-black sm:text-3xl" />,
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
       <FaGithub className="text-2xl text-black sm:text-3xl" />,
+      <SiRender className="text-2xl text-black sm:text-3xl" />,
     ],
   },
   {
@@ -73,7 +76,8 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "Doc Master",
-    description: "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
+    description:
+      "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
     image: docMaster,
     techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
@@ -108,7 +112,8 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "Password Generator",
-    description: "A secure password generator with advanced security features. Created Password Generator Website Pages Using HTML, CSS and JavaScript.",
+    description:
+      "A secure password generator with advanced security features. Created Password Generator Website Pages Using HTML, CSS and JavaScript.",
     image: passwordGen,
     techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
@@ -134,7 +139,7 @@ export const projects: Project[] = [
   {
     id: 7,
     name: "Coffee Shop",
-    description: "An interactive website for a coffee shop with online ordering. work-in-progress",
+    description: "An interactive website for a coffee shop with online ordering.",
     image: coffeeshop,
     techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
