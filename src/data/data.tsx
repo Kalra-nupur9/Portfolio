@@ -7,6 +7,8 @@ import {
   SiBootstrap,
   SiFigma,
   SiRender,
+  SiNextdotjs,
+  SiTypescript,
 } from "react-icons/si";
 
 import techsetGo from "../assets/images/projects/techsetGo.png";
@@ -35,13 +37,11 @@ export const projects: Project[] = [
       "A full-stack portfolio website to showcase my work and skills. Built with React and TypeScript, styled using Tailwind CSS, and powered by a Node.js + Express backend with MongoDB. Deployed on Vercel and Render.",
     image: portfolio,
     techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
       <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
+      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl"/>,
+
+      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
+      
       <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
       <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
       <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
@@ -49,6 +49,10 @@ export const projects: Project[] = [
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
       <FaGithub className="text-2xl text-black sm:text-3xl" />,
       <SiRender className="text-2xl text-black sm:text-3xl" />,
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      
     ],
   },
   {
@@ -58,9 +62,7 @@ export const projects: Project[] = [
       "Tech Set Go: Next.JS project , Created Website design using Figma and implemented design in Next.JS using Bootstrap Framework ,Custom CSS, Node.JS,Express.js and MongoDB",
     image: techsetGo,
     techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      <SiNextdotjs className="text-2xl text-black sm:text-3xl" />,
       <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
       <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
       <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
@@ -71,6 +73,9 @@ export const projects: Project[] = [
       <SiVercel className="text-2xl text-black sm:text-3xl" />,
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
       <FaGithub className="text-2xl text-black sm:text-3xl" />,
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
     ],
   },
   {
@@ -81,11 +86,13 @@ export const projects: Project[] = [
     image: docMaster,
     techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+            <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
       <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
       <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
+      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
     ],
   },
   {
@@ -119,8 +126,6 @@ export const projects: Project[] = [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
     ],
   },
   {
@@ -131,8 +136,6 @@ export const projects: Project[] = [
     techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
     ],
   },
@@ -142,11 +145,21 @@ export const projects: Project[] = [
     description: "An interactive website for a coffee shop with online ordering.",
     image: coffeeshop,
     techStack: [
+     <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
+      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl"/>,
+
+      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
+      
+      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
+      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
+      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
+      <SiVercel className="text-2xl text-black sm:text-3xl" />,
+      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
+      <FaGithub className="text-2xl text-black sm:text-3xl" />,
+      <SiRender className="text-2xl text-black sm:text-3xl" />,
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
     ],
   },
 ];
