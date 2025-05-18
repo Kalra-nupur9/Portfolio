@@ -10,7 +10,10 @@ import {
   SiBootstrap,
   SiFigma,
   SiRender,
+   SiTypescript,
 } from "react-icons/si";
+import { TbBrandVite } from "react-icons/tb";
+
 import { motion } from "framer-motion";
 
 interface TechItem {
@@ -24,12 +27,14 @@ const TechStack: React.FC = () => {
     { name: "MongoDB", icon: <SiMongodb className="text-6xl text-green-600" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-6xl text-green-500" /> },
     { name: "React", icon: <FaReact className="text-6xl text-blue-400" /> },
+     { name: "TypeScript", icon:  <SiTypescript className="text-6xl text-blue-800 " /> },
+   
     { name: "Git", icon: <FaGitAlt className="text-6xl text-orange-500" /> },
     { name: "GitHub", icon: <FaGithub className="text-6xl text-gray-800" /> },
     { name: "Express", icon: <SiExpress className="text-6xl text-gray-500" /> },
     { name: "Tailwind", icon: <SiTailwindcss className="text-6xl text-cyan-300" /> },
     { name: "Bootstrap", icon: <SiBootstrap className="text-6xl text-indigo-500" /> },
-    { name: "Redux", icon: <SiRedux className="text-6xl text-purple-600" /> },
+    { name: "Vite", icon: <TbBrandVite className="text-6xl text-purple-600" /> },
     { name: "Vercel", icon: <SiVercel className="text-6xl text-black" /> },
     { name: "Figma", icon: <SiFigma className="text-main-red text-6xl" /> },
     { name: "HTML", icon: <FaHtml5 className="text-6xl text-orange-600" /> },

@@ -38,10 +38,10 @@ export const projects: Project[] = [
     image: portfolio,
     techStack: [
       <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl"/>,
+      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl" />,
 
       <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-      
+
       <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
       <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
       <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
@@ -52,7 +52,6 @@ export const projects: Project[] = [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      
     ],
   },
   {
@@ -86,7 +85,7 @@ export const projects: Project[] = [
     image: docMaster,
     techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-            <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
+      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
       <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
@@ -145,11 +144,11 @@ export const projects: Project[] = [
     description: "An interactive website for a coffee shop with online ordering.",
     image: coffeeshop,
     techStack: [
-     <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl"/>,
+      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
+      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl" />,
 
       <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-      
+
       <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
       <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
       <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
