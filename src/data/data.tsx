@@ -11,6 +11,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+import { TbBrandVite } from "react-icons/tb";
 import techsetGo from "../assets/images/projects/techsetGo.png";
 import passwordManager from "../assets/images/projects/PasswordManager.png";
 import docMaster from "../assets/images/projects/Project1.png";
@@ -37,6 +38,7 @@ export const projects: Project[] = [
       "A full-stack portfolio website to showcase my work and skills. Built with React and TypeScript, styled using Tailwind CSS, and powered by a Node.js + Express backend with MongoDB. Deployed on Vercel and Render.",
     image: portfolio,
     techStack: [
+      <TbBrandVite className="text-2xl text-purple-600 sm:text-3xl" />,
       <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
       <SiTypescript className="text-2xl text-blue-800 sm:text-3xl" />,
 
