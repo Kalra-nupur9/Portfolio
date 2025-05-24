@@ -93,7 +93,7 @@ export const projects: Project[] = [
       <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
       <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
+      // <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
     ],
   },
   {
