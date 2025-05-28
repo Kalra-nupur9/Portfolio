@@ -50,7 +50,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1>Hello, I’m</h1>
+                <h1 className="h1-hero">Hello, I’m</h1>
                 <h5 className="h5">NUPUR KALRA</h5>
               </motion.div>
               <motion.div

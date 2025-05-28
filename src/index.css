@@ -155,7 +155,7 @@
 .introduction-div {
   @apply mr-auto place-self-center lg:col-span-7;
 }
-.introduction-div h1 {
+.h1-hero {
   @apply max-w-3xl text-4xl leading-none font-bold tracking-tight md:text-5xl xl:text-6xl;
 }
 
