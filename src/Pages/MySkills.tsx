@@ -33,16 +33,16 @@ const MySkills = () => {
                 >
                   <div className="space-y-4">
                     <p className="para">
-                      I am a passionate and self-motivated software developer with 6 months of
-                      hands-on experience in building and deploying websites. I’ve worked as a
-                      freelancer, honing my skills in full-stack web development, and have
-                      successfully delivered projects tailored to meet client needs. My journey in
-                      web development is driven by a strong commitment to creating intuitive and
+                      I am a passionate and self-motivated software developer with hands-on
+                      experience in building and deploying websites. I’ve worked as a freelancer,
+                      honing my skills in full-stack web development, and have successfully
+                      delivered projects tailored to meet client needs. My journey in web
+                      development is driven by a strong commitment to creating intuitive and
                       impactful user experiences.
                     </p>
                     <p className="para">
                       My tech stack includes HTML, CSS, JavaScript, React, Next.js, Node.js,
-                      MongoDB, and Redux, with version control expertise in Git and GitHub. I’ve
+                      MongoDB, and TypeScript with version control expertise in Git and GitHub. I’ve
                       developed e-commerce platforms, dynamic portfolios, and other responsive
                       projects that emphasize scalability and user-focused design.
                     </p>

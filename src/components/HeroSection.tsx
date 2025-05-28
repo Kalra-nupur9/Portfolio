@@ -82,7 +82,7 @@ const HeroSection = () => {
                     Contact ME
                   </Link>
                   {/* <a href={CV} download className="btn btn-red">
-                    Download PDF
+                    Download CV
                   </a> */}
                 </div>
               </motion.div>
