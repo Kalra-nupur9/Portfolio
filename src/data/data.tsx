@@ -19,7 +19,9 @@ import coffeeshop from "../assets/images/projects/coffeeshop.png";
 import passwordGen from "../assets/images/projects/passwordGenrator.png";
 import razorpay from "../assets/images/projects/razorpay.png";
 import portfolio from "../assets/images/projects/Portfolio.png";
-
+import pcsudbury from "../assets/images/projects/PCSudbury.png";
+import wctr from "../assets/images/projects/WCTRC.png";
+import nsw from "../assets/images/projects/nsw.png";
 // Define Project Type
 interface Project {
   id: number;
@@ -158,6 +160,42 @@ export const projects: Project[] = [
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
       <FaGithub className="text-2xl text-black sm:text-3xl" />,
       <SiRender className="text-2xl text-black sm:text-3xl" />,
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 8,
+    name: "Pcsudbury Business Website",
+    description:
+      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
+    image: pcsudbury,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 9,
+    name: "WCTR Business Website",
+    description:
+      "An interactive website for WCTR college showcasing there cources and attract new student to get in contact with them via website. Link: https://wctrc.com/",
+    image: wctr,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 10,
+    name: "NSW Business Website",
+    description:
+      "An interactive website for Northern Steel Works showcasing there Services and attract new Clients to get in contact with them via website.",
+    image: nsw,
+    techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
