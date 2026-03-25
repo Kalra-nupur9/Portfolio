@@ -2,15 +2,17 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
-const Email = require("./models/Email"); 
+const Email = require("./models/Email");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-  origin: "*"
-}));
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 
 // MongoDB connection
@@ -19,9 +21,14 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
+
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ Mongo error:", err));
-
+  
+mongoose.connection.on("disconnected", () => {
+  console.log("⚠️ MongoDB disconnected! Attempting reconnect...");
+  mongoose.connect(process.env.MONGO_URI);
+});
 // Routes
 const contactRoutes = require("./routes/contact");
 app.use("/api/contact", contactRoutes);
