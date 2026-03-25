@@ -2,7 +2,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 interface FormData {
-  name: string;
+  Name: string;
   email: string;
   contactNumber: string;
   message: string;
@@ -10,7 +10,7 @@ interface FormData {
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
+    Name: "",
     email: "",
     contactNumber: "",
     message: "",
@@ -62,7 +62,7 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: formData.name,
+          name: formData.Name,
           email: formData.email,
           contactNumber: formData.contactNumber,
           message: formData.message,
@@ -80,7 +80,7 @@ const ContactForm = () => {
         confirmButtonText: "OK",
       });
 
-      setFormData({ name: "", email: "", contactNumber: "", message: "" });
+      setFormData({ Name: "", email: "", contactNumber: "", message: "" });
     } catch (error) {
       console.error("Error submitting form:", error);
       Swal.fire({
@@ -103,7 +103,7 @@ const ContactForm = () => {
             <input
               type="text"
               name="Name"
-              value={formData.name}
+              value={formData.Name}
               onChange={handleChange}
               className="input-form"
               maxLength={50}
