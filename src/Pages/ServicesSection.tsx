@@ -165,10 +165,10 @@ const ServicesSection = () => {
             variants={ctaVariants}
             className="mt-16 flex flex-col items-center justify-center"
           >
-            <p className="text-center text-lg text-gray-600">Ready to bring your vision to life?</p>
+            <p className="text-center text-lg text-gray-600">Wan to Know more?</p>
 
             <Link to="/contactme" className="btn btn-blue flex items-center justify-center">
-              Let's Work Together
+              CLICK HERE
               <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"

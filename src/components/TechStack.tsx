@@ -1,5 +1,14 @@
 import { JSX } from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+  FaWordpress,
+} from "react-icons/fa";
 import {
   SiExpress,
   SiTailwindcss,
@@ -10,7 +19,7 @@ import {
   SiBootstrap,
   SiFigma,
   SiRender,
-   SiTypescript,
+  SiTypescript,
 } from "react-icons/si";
 import { TbBrandVite } from "react-icons/tb";
 
@@ -27,8 +36,7 @@ const TechStack: React.FC = () => {
     { name: "MongoDB", icon: <SiMongodb className="text-6xl text-green-600" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-6xl text-green-500" /> },
     { name: "React", icon: <FaReact className="text-6xl text-blue-400" /> },
-     { name: "TypeScript", icon:  <SiTypescript className="text-6xl text-blue-800 " /> },
-   
+    { name: "TypeScript", icon: <SiTypescript className="text-6xl text-blue-800" /> },
     { name: "Git", icon: <FaGitAlt className="text-6xl text-orange-500" /> },
     { name: "GitHub", icon: <FaGithub className="text-6xl text-gray-800" /> },
     { name: "Express", icon: <SiExpress className="text-6xl text-gray-500" /> },
@@ -40,7 +48,8 @@ const TechStack: React.FC = () => {
     { name: "HTML", icon: <FaHtml5 className="text-6xl text-orange-600" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-6xl text-blue-500" /> },
     { name: "JavaScript", icon: <FaJs className="text-6xl text-yellow-500" /> },
-    { name: "Render", icon: <SiRender className="text-2xl text-black sm:text-3xl" /> },
+    { name: "Render", icon: <SiRender className="text-6xl text-black" /> },
+    { name: "Wordpress", icon: <FaWordpress className="text-wordpress-blue text-6xl" /> },
   ];
 
   return (

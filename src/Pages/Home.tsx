@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection";
 import CallOnAction from "../components/CallToAction";
 // import { motion } from "framer-motion";
 import ServicesSection from "./ServicesSection";
+import Feedback from "./Feedback";
 
 const Home = () => {
   // useEffect(() => {
@@ -20,8 +21,9 @@ const Home = () => {
      
       <hr />
       <ServicesSection />
-      {/* <hr />
-      <CallOnAction /> */}
+      <hr />
+      <CallOnAction />
+      {/* <Feedback/> */}
     </div>
   );
 };

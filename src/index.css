@@ -5,6 +5,9 @@
   --color-main-red: #ff5c8d;
   --color-blue-dark: #432dd7;
   --color-pink-light: #fcf0f7;
+  --color-wordpress-blue: #3858e9;
+   --color-grey-hi: #37454E;
+  
 
   --tracking-tightest_2: -0.3em;
   --tracking-tightest: -0.2em;
@@ -36,7 +39,7 @@
   @apply text-3xl text-pink-600 sm:text-4xl md:text-5xl;
 }
 .h2-Light {
-  @apply text-3xl text-pink-light sm:text-4xl md:text-5xl;
+  @apply text-pink-light text-3xl sm:text-4xl md:text-5xl;
 }
 .h3 {
   @apply text-3xl text-pink-500;
@@ -45,9 +48,12 @@
 .para {
   @apply text-justify text-base font-light text-gray-600 sm:text-lg;
 }
+.para-center {
+  @apply text-center text-base font-light text-gray-600 sm:text-lg;
+}
 
 .para-contact {
-  @apply text-justify text-sm font-light text-pink-light  sm:text-base;
+  @apply text-pink-light text-justify text-sm font-light sm:text-base;
 }
 
 /* button */
@@ -58,10 +64,10 @@
   @apply relative z-10 my-5 w-full overflow-hidden rounded-md px-5 py-3 text-center text-base font-medium shadow-lg transition-all duration-500 sm:w-full md:w-auto lg:w-auto;
 }
 .btn-red {
-  @apply bg-main-red text-white hover:text-black focus:ring-2 focus:outline-none focus:ring-pink-800;
+  @apply bg-main-red text-white hover:text-black focus:ring-2 focus:ring-pink-800 focus:outline-none;
 }
 .btn-red::before {
-  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-white transition-transform duration-500  ;
+  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-white transition-transform duration-500;
   content: "";
 }
 .btn-white {
@@ -74,11 +80,11 @@
 }
 
 .btn-blue {
-  @apply bg-blue-dark text-white hover:text-white  focus:ring-2 focus:outline-none focus:ring-blue-900;
+  @apply bg-blue-dark text-white hover:text-white focus:ring-2 focus:ring-blue-900 focus:outline-none;
 }
 
 .btn-blue::before {
-  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-blue-500 transition-transform duration-500 ;
+  @apply absolute inset-0 z-[-1] scale-x-0 rounded-md bg-blue-500 transition-transform duration-500;
   content: "";
 }
 .btn:hover::before {
@@ -213,7 +219,7 @@ hr {
   @apply mt-3 text-2xl text-green-600;
 }
 .quote {
-  @apply text-pink-light/50 text-2xl italic;
+  @apply text-pink-900 text-2xl italic text-center;
 }
 
 /* ClientFeedback.tsx*/
@@ -239,7 +245,7 @@ hr {
   @apply grid gap-10 p-5 sm:grid-cols-2 sm:px-15 md:grid-cols-3;
 }
 .project-card {
-  @apply flex flex-col h-full border border-pink-800/10 relative overflow-hidden rounded-2xl bg-pink-50 shadow-lg transition-transform duration-500 hover:scale-105;
+  @apply relative flex h-full flex-col overflow-hidden rounded-2xl border border-pink-800/10 bg-pink-50 shadow-lg transition-transform duration-500 hover:scale-105;
 }
 .project-Sr-No {
   @apply absolute top-2 rounded-r-full bg-pink-600 px-10 py-4 text-2xl text-white opacity-60;
@@ -248,7 +254,7 @@ hr {
   @apply h-60 w-full shadow-lg;
 }
 .project-details {
-  @apply flex  min-h-[72px] pb-2 items-center justify-center overflow-hidden text-base;
+  @apply flex min-h-[72px] items-center justify-center overflow-hidden pb-2 text-base;
 }
 .project-tec {
   @apply mt-auto flex flex-wrap items-center justify-center gap-5;
@@ -312,7 +318,7 @@ hr {
 /* Contact Forms */
 
 .contact-div {
-  @apply  mx-auto flex w-full flex-col rounded-3xl  bg-white shadow-xl sm:w-[90%] sm:flex-row;
+  @apply mx-auto flex w-full flex-col rounded-3xl bg-white shadow-xl sm:w-[90%] sm:flex-row;
 }
 .detail-box {
   @apply to-blue-dark text-pink-light from-main-red flex w-full flex-col justify-between gap-15 rounded-3xl bg-linear-to-br p-3 sm:w-[50%] sm:p-8;

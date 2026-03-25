@@ -1,4 +1,13 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+  FaWordpress,
+} from "react-icons/fa";
 import {
   SiExpress,
   SiTailwindcss,
@@ -22,6 +31,7 @@ import portfolio from "../assets/images/projects/Portfolio.png";
 import pcsudbury from "../assets/images/projects/PCSudbury.png";
 import wctr from "../assets/images/projects/WCTRC.png";
 import nsw from "../assets/images/projects/nsw.png";
+import immizest from "../assets/images/projects/immizest.png";
 // Define Project Type
 interface Project {
   id: number;
@@ -35,6 +45,99 @@ interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    name: "Immizest Website",
+    description:
+      "An interactive website for Immizest showcasing there cources and attract new student to get in contact with them via website. Link: https://immizest.com/",
+    image: immizest,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
+    ],
+  },
+
+  {
+    id: 2,
+    name: "Pcsudbury Business Website",
+    description:
+      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
+    image: pcsudbury,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 3,
+    name: "WCTR Business Website",
+    description:
+      "An interactive website for WCTR college showcasing there cources and attract new student to get in contact with them via website. Link: https://wctrc.com/",
+    image: wctr,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 4,
+    name: "NSW Business Website",
+    description:
+      "An interactive website for Northern Steel Works showcasing there Services and attract new Clients to get in contact with them via website.",
+    image: nsw,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 5,
+    name: "Tech Set Go",
+    description:
+      "Tech Set Go: Next.JS project , Created Website design using Figma and implemented design in Next.JS using Bootstrap Framework ,Custom CSS, Node.JS,Express.js and MongoDB",
+    image: techsetGo,
+    techStack: [
+      <SiNextdotjs className="text-2xl text-black sm:text-3xl" />,
+      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
+      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
+      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
+      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
+      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
+      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
+      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
+      <SiVercel className="text-2xl text-black sm:text-3xl" />,
+      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
+      <FaGithub className="text-2xl text-black sm:text-3xl" />,
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 6,
+    name: "Doc Master",
+    description:
+      "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
+    image: docMaster,
+    techStack: [
+      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
+      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
+      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
+      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
+      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
+      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
+      // <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
+    ],
+  },
+  {
+    id: 7,
     name: "My Portfolio ",
     description:
       "A full-stack portfolio website to showcase my work and skills. Built with React and TypeScript, styled using Tailwind CSS, and powered by a Node.js + Express backend with MongoDB. Deployed on Vercel and Render.",
@@ -59,47 +162,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
-    name: "Tech Set Go",
-    description:
-      "Tech Set Go: Next.JS project , Created Website design using Figma and implemented design in Next.JS using Bootstrap Framework ,Custom CSS, Node.JS,Express.js and MongoDB",
-    image: techsetGo,
-    techStack: [
-      <SiNextdotjs className="text-2xl text-black sm:text-3xl" />,
-      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
-      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
-      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
-      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
-      <SiVercel className="text-2xl text-black sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      <FaGithub className="text-2xl text-black sm:text-3xl" />,
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-    ],
-  },
-  {
-    id: 3,
-    name: "Doc Master",
-    description:
-      "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
-    image: docMaster,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      // <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-    ],
-  },
-  {
-    id: 4,
+    id: 8,
     name: "Password Manager",
     description:
       "Created Password Manager Website using React.Js, TailwindCSS, Node.JS and MongoDB.",
@@ -120,7 +183,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 9,
     name: "Password Generator",
     description:
       "A secure password generator with advanced security features. Created Password Generator Website Pages Using HTML, CSS and JavaScript.",
@@ -132,7 +195,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 10,
     name: "Razorpay Clone",
     description: "A modern Razorpay payment gateway clone.",
     image: razorpay,
@@ -143,7 +206,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 11,
     name: "Coffee Shop",
     description: "An interactive website for a coffee shop with online ordering.",
     image: coffeeshop,
@@ -160,42 +223,6 @@ export const projects: Project[] = [
       <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
       <FaGithub className="text-2xl text-black sm:text-3xl" />,
       <SiRender className="text-2xl text-black sm:text-3xl" />,
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-    ],
-  },
-  {
-    id: 8,
-    name: "Pcsudbury Business Website",
-    description:
-      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
-    image: pcsudbury,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-    ],
-  },
-  {
-    id: 9,
-    name: "WCTR Business Website",
-    description:
-      "An interactive website for WCTR college showcasing there cources and attract new student to get in contact with them via website. Link: https://wctrc.com/",
-    image: wctr,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-    ],
-  },
-  {
-    id: 10,
-    name: "NSW Business Website",
-    description:
-      "An interactive website for Northern Steel Works showcasing there Services and attract new Clients to get in contact with them via website.",
-    image: nsw,
-    techStack: [
       <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
       <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
       <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,

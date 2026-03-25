@@ -1,10 +1,12 @@
 import ClientFeedback from "../components/ClientFeedback";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Feedback = () => {
+
   const navigate = useNavigate();
   return (
-    <div className="bg-color">
+    <div className="px-20">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -31,11 +33,7 @@ const Feedback = () => {
 
         
 
-        <div className="btn-div">
-          <button className="btn btn-blue" onClick={() => navigate("/addFeedback")}>
-            Add Feedback
-          </button>
-        </div>
+       
       </motion.div>
     </div>
   );

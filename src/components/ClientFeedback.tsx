@@ -36,11 +36,7 @@ const ClientFeedback=() => {
         <div className="feedback-card ">
           <div>
             <div className="flex justify-center">
-              <img
-                src={feedback.image}
-                alt={feedback.name}
-                className="feedback-img"
-              />
+              
             </div>
             <h4 className="client-name">{feedback.name}</h4>
             <Tag value={feedback.message} className="para italic" />
@@ -52,7 +48,7 @@ const ClientFeedback=() => {
 
   return (
     <>
-      <div className="bg-color">
+      <div className="">
         
 
         {feedbackList.length > 0 ? (

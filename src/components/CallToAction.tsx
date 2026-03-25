@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   const [email, setEmail] = useState<string>("");
@@ -48,6 +49,19 @@ const CallToAction = () => {
     triggerOnce: true, // run animation once
     threshold: 0.2,
   });
+  const ctaVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
 
   return (
     <>
@@ -74,9 +88,9 @@ const CallToAction = () => {
               {/* Content section*/}
               <section>
                 <div className="action-content">
-                  <header>
-                    <h2 className="h2">Let’s Connect & Build Something Amazing! </h2>
-                    <p className="para max-w-3xl">
+                  <header className=" ">
+                    <h2 className="h2  text-center">Let’s Connect & Build Something Amazing! </h2>
+                    <p className="para-center max-w-3xl ">
                       Whether you need a stunning website, a seamless user experience, or expert web
                       development services, I'm here to help. Drop your email, and I'll reach out to
                       discuss how we can turn your vision into reality.{" "}
@@ -86,11 +100,29 @@ const CallToAction = () => {
                   <p className="quote">
                     "Great things start with a simple conversation. Let’s talk!"
                   </p>
+                  <motion.div
+            variants={ctaVariants}
+            className=" flex flex-col items-center justify-center"
+          >
+            {/* <p className="text-center text-lg text-gray-600">Ready to bring your vision to life?</p> */}
+
+            <Link to="/contactme" className="btn btn-blue flex items-center justify-center">
+              Let's Work Together
+              <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </Link>
+          </motion.div>
                 </div>
               </section>
 
               {/* Email Subscription Form */}
-              <main>
+              {/* <main>
                 <form className="action-form" onSubmit={handleSubmit}>
                   <input
                     type="email"
@@ -104,7 +136,7 @@ const CallToAction = () => {
                     Submit Now
                   </button>
                 </form>
-              </main>
+              </main> */}
             </div>
           </div>
         </motion.div>
