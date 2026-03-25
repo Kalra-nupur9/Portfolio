@@ -16,11 +16,13 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
-    if (name === "Name" && value.length > 50) return; // Limit name to 50 characters
-    if (name === "contactNumber" && value.length > 15) return; // Limit contact number
+    if (name === "Name" && value.length > 50) return;
+    if (name === "contactNumber" && value.length > 15) return;
 
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -30,9 +32,28 @@ const ContactForm = () => {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      alert("Please enter a valid email address.");
+      Swal.fire({
+        title: "Invalid Email",
+        text: "Please enter a valid email address.",
+        icon: "warning",
+        confirmButtonText: "OK",
+      });
       return;
     }
+
+    setIsSubmitting(true);
+
+    // Show loading popup
+    Swal.fire({
+      title: "Submitting...",
+      text: "Please wait while we send your message.",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
 
     try {
       const res = await fetch("https://portfolio-backend-0gej.onrender.com/api/contact", {
@@ -68,12 +89,14 @@ const ContactForm = () => {
         icon: "error",
         confirmButtonText: "Try Again",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="">
+      <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4 sm:flex-row">
           <div className="w-full">
             <label className="label">Full Name</label>
@@ -86,6 +109,7 @@ const ContactForm = () => {
               maxLength={50}
               required
               placeholder="Enter Your Full Name"
+              disabled={isSubmitting}
             />
           </div>
         </div>
@@ -101,6 +125,7 @@ const ContactForm = () => {
               className="input-form"
               required
               placeholder="Enter Your Email id"
+              disabled={isSubmitting}
             />
           </div>
           <div className="w-full">
@@ -114,6 +139,7 @@ const ContactForm = () => {
               maxLength={15}
               required
               placeholder="Enter number with country code"
+              disabled={isSubmitting}
             />
           </div>
         </div>
@@ -127,19 +153,21 @@ const ContactForm = () => {
             className="input-form"
             rows={4}
             required
-            placeholder="Enter Your Message "
+            placeholder="Enter Your Message"
+            disabled={isSubmitting}
           ></textarea>
         </div>
 
         <div className="btn-div">
-          <button type="submit" className="btn btn-blue">
-            Submit Query
+          <button
+            type="submit"
+            className="btn btn-blue"
+            disabled={isSubmitting}
+            style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? "not-allowed" : "pointer" }}
+          >
+            {isSubmitting ? "Submitting..." : "Submit Query"}
           </button>
         </div>
-
-        {/* {responseMessage && (
-          <p className="mt-4 text-center text-lg text-green-600">{responseMessage}</p>
-        )} */}
       </form>
     </>
   );
