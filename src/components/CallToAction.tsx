@@ -116,7 +116,7 @@ const CallToAction = () => {
                   >
                     {/* <p className="text-center text-lg text-gray-600">Ready to bring your vision to life?</p> */}
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 justify-center items-center">
                       <button
                         onClick={() => setOpenContact(true)}
                         className="btn btn-red flex items-center justify-center"
