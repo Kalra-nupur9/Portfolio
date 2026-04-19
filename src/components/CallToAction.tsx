@@ -116,11 +116,8 @@ const CallToAction = () => {
                   >
                     {/* <p className="text-center text-lg text-gray-600">Ready to bring your vision to life?</p> */}
 
-                    <div className="flex flex-wrap gap-3 justify-center items-center">
-                      <button
-                        onClick={() => setOpenContact(true)}
-                        className="btn btn-red flex items-center justify-center"
-                      >
+                    <div className="flex flex-wrap items-center justify-center gap-3">
+                      <button onClick={() => setOpenContact(true)} className="btn btn-red">
                         Let's Work Together
                         <svg
                           className="ml-2 h-5 w-5"
@@ -136,13 +133,7 @@ const CallToAction = () => {
                           />
                         </svg>
                       </button>
-                      {openContact && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm">
-                          <div className="w-full max-w-6xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-                            <ContactDetails onClose={() => setOpenContact(false)} />
-                          </div>
-                        </div>
-                      )}
+
                       <a
                         href="mailto:nupurk.work@gmail.com?subject=Project Inquiry&body=Hi Nupur,"
                         className="btn btn-white"
@@ -152,6 +143,20 @@ const CallToAction = () => {
                     </div>
                   </motion.div>
                 </div>
+                {/*MODAL */}
+                {openContact && (
+                  <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm"
+                    onClick={() => setOpenContact(false)}
+                  >
+                    <div
+                      className="max-h-[90vh] w-full max-w-6xl overflow-y-auto"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ContactDetails onClose={() => setOpenContact(false)} />
+                    </div>
+                  </div>
+                )}
               </section>
 
               {/* Email Subscription Form */}
