@@ -9,9 +9,13 @@ import CV from "../assets/PDF/NK-CV.pdf";
 import plus from "../assets/images/userAsset/plus.png";
 import programming from "../assets/images/userAsset/Programming.gif";
 import { Link } from "react-router-dom";
+import { FaCircle } from "react-icons/fa";
+import { useState } from "react";
+import ContactDetails from "./ContactDetails";
 
 const HeroSection = () => {
   const typedRef = useRef<HTMLDivElement | null>(null);
+  const [openContact, setOpenContact] = useState(false);
 
   useEffect(() => {
     if (typedRef.current) {
@@ -39,6 +43,9 @@ const HeroSection = () => {
   return (
     <>
       <div className="bg-color py-9 sm:py-5">
+        <div className="hero-bg"></div>
+        <div className="hero-bg"></div>
+        <div className="hero-bg"></div>
         {/* HERO SECTION */}
         <div className="relative">
           {/* Faded Text */}
@@ -50,7 +57,12 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="h1-hero ">Hello, I’m</h1>
+                <div className="hero-badge">
+                  <FaCircle className="text-[8px]" />
+                  <span className="text-highlight">Available for Freelance</span>
+                </div>
+
+                <h1 className="h1-hero">Hello, I’m</h1>
                 <h5 className="h5">NUPUR KALRA</h5>
               </motion.div>
               <motion.div
@@ -78,10 +90,18 @@ const HeroSection = () => {
                 transition={{ duration: 0.6 }}
               >
                 <div className="flex flex-col gap-2 py-5 sm:flex-row">
-                  <Link to="/contactme" className="btn btn-red">
-                    Contact ME
-                  </Link>
-                  <a href={CV} download className="btn btn-red">
+                  <button onClick={() => setOpenContact(true)} className="btn btn-red">
+                    Contact Me →
+                  </button>
+                  {openContact && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm">
+                      {/* ✅ NO dark container here */}
+                      <div className="w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+                        <ContactDetails onClose={() => setOpenContact(false)} />
+                      </div>
+                    </div>
+                  )}
+                  <a href={CV} download className="btn btn-white">
                     Download CV
                   </a>
                 </div>

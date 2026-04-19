@@ -3,14 +3,15 @@
 // import { FaLinkedin } from "react-icons/fa";
 // import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import FootLogo from "../assets/images/footLogo.png";
+
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className="footer" id="footer">
       <div className="mx-auto">
-        <div className="footer-container">
-          {/* Links */}
+        {/* <div className="footer-container">
+          Links
           <div className="footer-menu">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               Home
@@ -21,16 +22,16 @@ const Footer = () => {
             <Link to="/skills" onClick={() => window.scrollTo(0, 0)}>
               Skills
             </Link>
-            {/*<Link to="/feedback ">Feedback</Link>
+            <Link to="/feedback ">Feedback</Link>
                <Link to="/pricing ">Pricing</Link>
-                <Link to="/faqs ">FAQs</Link> */}
+                <Link to="/faqs ">FAQs</Link>
             <Link to="/contactme" onClick={() => window.scrollTo(0, 0)}>
               Contact Me
             </Link>
           </div>
 
-          {/* socials */}
-          {/* <div className="socials">
+          socials
+          <div className="socials">
             <FaInstagram className="text-white text-3xl cursor-pointer hover:text-pink-200" />
 
             <Link to="/" target="_blank">
@@ -44,13 +45,13 @@ const Footer = () => {
               {" "}
               <FaXTwitter />
             </Link>
-          </div> */}
-        </div>
-
+          </div>
+        </div> */}
         <Link to="/" className="flex justify-center">
-          <img src={FootLogo} alt="" className="w-40" />
+          <h3 className="h5 w-40">NK.</h3>
         </Link>
-        <p className="text-pink-300">© 2025 All Rights Reserved.</p>
+        
+        <p className="text-white">© {year} All Rights Reserved.</p>
       </div>
     </footer>
   );

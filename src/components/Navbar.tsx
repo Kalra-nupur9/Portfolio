@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { FaHome } from "react-icons/fa";
-import { GoProjectRoadmap } from "react-icons/go";
-import { GiSkills } from "react-icons/gi";
-import { RiContactsBook3Line } from "react-icons/ri";
+// import { FaHome } from "react-icons/fa";
+// import { GoProjectRoadmap } from "react-icons/go";
+// import { GiSkills } from "react-icons/gi";
+// import { RiContactsBook3Line } from "react-icons/ri";
 // import { RiCustomerService2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import LogoImage from "../assets/images/logo.png";
@@ -12,37 +12,31 @@ function Navbar() {
     setisClick(!isClick);
   };
   return (
-    <nav id="navBar" className="bg-color">
+    <nav id="navBar" className="bg-color border-gray-600 border-b-1">
       <div className="nav-space">
         <div className="nav-bar">
           <Link to="/" className=" ">
-            <img src={LogoImage} alt="" className="w-40" />
+            {/* <img src={LogoImage} alt="" className="w-40" /> */}
+            <h3 className="w-40 h5">NK.</h3>
           </Link>
 
           <div className="hidden w-3/4 md:block">
             <div className="nav-menu">
-              <Link to="/" className="nav-item">
+              <a href="#home" className="nav-item">
                 Home
-              </Link>
-              <Link to="/projects" className="nav-item">
+              </a>
+              <a href="#projects" className="nav-item">
                 Projects
-              </Link>
-              <Link to="/skills" className="nav-item">
+              </a>
+              <a href="#skills" className="nav-item">
                 Skills
-              </Link>
-              {/* <Link to="/feedback" className="nav-item">
-                Feedback
-              </Link>
-             <Link to="/pricing" className="nav-item">
-                Pricing
-              </Link>
-              
-             <Link to="/faqs" className="nav-item">
-                FAQs
-              </Link> */}
-              <Link to="/contactme" className="nav-item">
-                Contact Me
-              </Link>
+              </a>
+              <a href="#services" className="nav-item">
+                Services
+              </a>
+              <a href="#contact" className="nav-item">
+                Contact
+              </a>
             </div>
           </div>
 
@@ -84,18 +78,20 @@ function Navbar() {
         }`}
       >
         <div className="w-full -space-y-1 px-4 pt-2 pb-4">
-          <Link to="/" className="media-nav-items" onClick={() => setisClick(false)}>
+          <a href="#home" className="media-nav-items" onClick={() => setisClick(false)}>
             Home
-          </Link>
-          <Link to="/projects" className="media-nav-items" onClick={() => setisClick(false)}>
+          </a>
+          <a href="#projects" className="media-nav-items" onClick={() => setisClick(false)}>
             Projects
-          </Link>
-          <Link to="/skills" className="media-nav-items" onClick={() => setisClick(false)}>
+          </a>
+          <a href="#skills" className="media-nav-items" onClick={() => setisClick(false)}>
             Skills
-          </Link>
-          <Link to="/contactme" className="media-nav-items" onClick={() => setisClick(false)}>
-            Contact Me
-          </Link>
+          </a><a href="#services" className="media-nav-items" onClick={() => setisClick(false)}>
+            Services
+          </a>
+          <a href="#contact" className="media-nav-items" onClick={() => setisClick(false)}>
+            Contact
+          </a>
         </div>
       </div>
     </nav>

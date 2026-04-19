@@ -1,26 +1,4 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaNodeJs,
-  FaReact,
-  FaGitAlt,
-  FaGithub,
-  FaWordpress,
-} from "react-icons/fa";
-import {
-  SiExpress,
-  SiTailwindcss,
-  SiMongodb,
-  SiVercel,
-  SiBootstrap,
-  SiFigma,
-  SiRender,
-  SiNextdotjs,
-  SiTypescript,
-} from "react-icons/si";
 
-import { TbBrandVite } from "react-icons/tb";
 import techsetGo from "../assets/images/projects/techsetGo.png";
 import passwordManager from "../assets/images/projects/PasswordManager.png";
 import docMaster from "../assets/images/projects/Project1.png";
@@ -49,12 +27,8 @@ export const projects: Project[] = [
     description:
       "An interactive website for Immizest showcasing there cources and attract new student to get in contact with them via website. Link: https://immizest.com/",
     image: immizest,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
-    ],
+
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
   },
 
   {
@@ -63,12 +37,7 @@ export const projects: Project[] = [
     description:
       "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
     image: pcsudbury,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
-    ],
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
   },
   {
     id: 3,
@@ -76,12 +45,7 @@ export const projects: Project[] = [
     description:
       "An interactive website for WCTR college showcasing there cources and attract new student to get in contact with them via website. Link: https://wctrc.com/",
     image: wctr,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
-    ],
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
   },
   {
     id: 4,
@@ -89,12 +53,7 @@ export const projects: Project[] = [
     description:
       "An interactive website for Northern Steel Works showcasing there Services and attract new Clients to get in contact with them via website.",
     image: nsw,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <FaWordpress className="text-wordpress-blue text-2xl sm:text-3xl" />,
-    ],
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
   },
   {
     id: 5,
@@ -102,21 +61,22 @@ export const projects: Project[] = [
     description:
       "Tech Set Go: Next.JS project , Created Website design using Figma and implemented design in Next.JS using Bootstrap Framework ,Custom CSS, Node.JS,Express.js and MongoDB",
     image: techsetGo,
+
     techStack: [
-      <SiNextdotjs className="text-2xl text-black sm:text-3xl" />,
-      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
-      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
-      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
-      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
-      <SiVercel className="text-2xl text-black sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      <FaGithub className="text-2xl text-black sm:text-3xl" />,
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      "Next.js",
+      "Bootstrap",
+      "Node.js",
+      "React",
+      "Figma",
+      "Git",
+      "Express",
+      "MongoDB",
+      "Vercel",
+      "Tailwind CSS",
+      "GitHub",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
   {
@@ -125,16 +85,7 @@ export const projects: Project[] = [
     description:
       "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
     image: docMaster,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <SiFigma className="text-main-red text-2xl sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      // <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-    ],
+    techStack: ["HTML", "Figma", "CSS", "JavaScript", "Bootstrap", "React", "Tailwind CSS"],
   },
   {
     id: 7,
@@ -143,22 +94,20 @@ export const projects: Project[] = [
       "A full-stack portfolio website to showcase my work and skills. Built with React and TypeScript, styled using Tailwind CSS, and powered by a Node.js + Express backend with MongoDB. Deployed on Vercel and Render.",
     image: portfolio,
     techStack: [
-      <TbBrandVite className="text-2xl text-purple-600 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl" />,
-
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-
-      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
-      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
-      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
-      <SiVercel className="text-2xl text-black sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      <FaGithub className="text-2xl text-black sm:text-3xl" />,
-      <SiRender className="text-2xl text-black sm:text-3xl" />,
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      "Vite",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Git",
+      "Express",
+      "MongoDB",
+      "Vercel",
+      "Tailwind CSS",
+      "GitHub",
+      "Render",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
   {
@@ -168,18 +117,18 @@ export const projects: Project[] = [
       "Created Password Manager Website using React.Js, TailwindCSS, Node.JS and MongoDB.",
     image: passwordManager,
     techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-      <SiBootstrap className="text-2xl text-indigo-500 sm:text-3xl" />,
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
-      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
-      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
-      <SiVercel className="text-2xl text-black sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      <FaGithub className="text-2xl text-black sm:text-3xl" />,
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Node.js",
+      "React",
+      "Git",
+      "Express",
+      "MongoDB",
+      "Vercel",
+      "Tailwind CSS",
+      "GitHub",
     ],
   },
   {
@@ -188,22 +137,14 @@ export const projects: Project[] = [
     description:
       "A secure password generator with advanced security features. Created Password Generator Website Pages Using HTML, CSS and JavaScript.",
     image: passwordGen,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
-    ],
+    techStack: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 10,
     name: "Razorpay Clone",
     description: "A modern Razorpay payment gateway clone.",
     image: razorpay,
-    techStack: [
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-    ],
+    techStack: ["HTML", "CSS", "Tailwind CSS"],
   },
   {
     id: 11,
@@ -211,21 +152,19 @@ export const projects: Project[] = [
     description: "An interactive website for a coffee shop with online ordering.",
     image: coffeeshop,
     techStack: [
-      <FaReact className="text-2xl text-blue-400 sm:text-3xl" />,
-      <SiTypescript className="text-2xl text-blue-800 sm:text-3xl" />,
-
-      <FaNodeJs className="text-2xl text-green-500 sm:text-3xl" />,
-
-      <FaGitAlt className="text-2xl text-orange-500 sm:text-3xl" />,
-      <SiExpress className="text-2xl text-gray-500 sm:text-3xl" />,
-      <SiMongodb className="text-2xl text-green-600 sm:text-3xl" />,
-      <SiVercel className="text-2xl text-black sm:text-3xl" />,
-      <SiTailwindcss className="text-2xl text-teal-500 sm:text-3xl" />,
-      <FaGithub className="text-2xl text-black sm:text-3xl" />,
-      <SiRender className="text-2xl text-black sm:text-3xl" />,
-      <FaHtml5 className="text-2xl text-orange-600 sm:text-3xl" />,
-      <FaCss3Alt className="text-2xl text-blue-500 sm:text-3xl" />,
-      <FaJs className="text-2xl text-yellow-500 sm:text-3xl" />,
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Git",
+      "Express",
+      "MongoDB",
+      "Vercel",
+      "Tailwind CSS",
+      "GitHub",
+      "Render",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
 ];

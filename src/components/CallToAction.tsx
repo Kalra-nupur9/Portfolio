@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import { FaCircle } from "react-icons/fa";
 
+import ContactDetails from "./ContactDetails";
 const CallToAction = () => {
   const [email, setEmail] = useState<string>("");
+  const [openContact, setOpenContact] = useState(false);
 
   // prevent invalid email entries
   const isValidEmail = (email: string): boolean => {
@@ -62,7 +65,6 @@ const CallToAction = () => {
     },
   };
 
-
   return (
     <>
       <div className="bg-color">
@@ -74,8 +76,12 @@ const CallToAction = () => {
         >
           <div className="action-bg">
             <div className="action-card">
+              <div className="hero-bg"></div>
+              <div className="hero-bg"></div>
+              <div className="hero-bg"></div>
+              <div className="hero-bg"></div>
               {/* bg balls */}
-              <div className="absolute top-0 left-0 rounded-full bg-pink-300 p-24 opacity-50 md:left-10"></div>
+              {/* <div className="absolute top-0 left-0 rounded-full bg-pink-300 p-24 opacity-50 md:left-10"></div>
               <div className="absolute right-10 bottom-5 rounded-full bg-pink-300 p-16 opacity-50 md:right-20"></div>
               <div className="absolute top-10 left-20 rounded-full bg-pink-400 p-10 opacity-50 md:left-40"></div>
               <div className="absolute right-30 bottom-15 rounded-full bg-pink-600 p-24 opacity-50 md:right-60"></div>
@@ -83,14 +89,18 @@ const CallToAction = () => {
               <div className="absolute right-50 bottom-25 rounded-full bg-pink-400 p-12 opacity-50 md:right-96"></div>
               <div className="absolute top-30 left-60 rounded-full bg-pink-300 p-24 opacity-50 md:left-96"></div>
               <div className="absolute right-70 bottom-35 rounded-full bg-pink-300 p-16 opacity-50"></div>
-              <div className="absolute top-40 left-80 rounded-full bg-pink-600 p-12 opacity-50"></div>
+              <div className="absolute top-40 left-80 rounded-full bg-pink-600 p-12 opacity-50"></div> */}
 
               {/* Content section*/}
               <section>
                 <div className="action-content">
-                  <header className=" ">
-                    <h2 className="h2  text-center">Let’s Connect & Build Something Amazing! </h2>
-                    <p className="para-center max-w-3xl ">
+                  <header className="flex flex-col items-center text-center">
+                    <div className="cta-badge">
+                      <FaCircle className="text-[8px]" />
+                      <span>Available for Freelance</span>
+                    </div>
+                    <h2 className="h2 text-center">Let’s Connect & Build Something Amazing! </h2>
+                    <p className="para-center">
                       Whether you need a stunning website, a seamless user experience, or expert web
                       development services, I'm here to help. Drop your email, and I'll reach out to
                       discuss how we can turn your vision into reality.{" "}
@@ -101,23 +111,46 @@ const CallToAction = () => {
                     "Great things start with a simple conversation. Let’s talk!"
                   </p>
                   <motion.div
-            variants={ctaVariants}
-            className=" flex flex-col items-center justify-center"
-          >
-            {/* <p className="text-center text-lg text-gray-600">Ready to bring your vision to life?</p> */}
+                    variants={ctaVariants}
+                    className="flex flex-col items-center justify-center"
+                  >
+                    {/* <p className="text-center text-lg text-gray-600">Ready to bring your vision to life?</p> */}
 
-            <Link to="/contactme" className="btn btn-blue flex items-center justify-center">
-              Let's Work Together
-              <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
-            </Link>
-          </motion.div>
+                    <div className="flex flex-wrap gap-3">
+                      <button
+                        onClick={() => setOpenContact(true)}
+                        className="btn btn-red flex items-center justify-center"
+                      >
+                        Let's Work Together
+                        <svg
+                          className="ml-2 h-5 w-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </button>
+                      {openContact && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm">
+                          <div className="w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+                            <ContactDetails onClose={() => setOpenContact(false)} />
+                          </div>
+                        </div>
+                      )}
+                      <a
+                        href="mailto:nupurk.work@gmail.com?subject=Project Inquiry&body=Hi Nupur,"
+                        className="btn btn-white"
+                      >
+                        Email Me
+                      </a>
+                    </div>
+                  </motion.div>
                 </div>
               </section>
 

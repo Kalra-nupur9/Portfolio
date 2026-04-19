@@ -1,4 +1,4 @@
-import ClientFeedback from "../components/ClientFeedback";
+import ClientFeedback from "./ClientFeedback";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

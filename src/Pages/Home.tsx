@@ -3,8 +3,11 @@
 import HeroSection from "../components/HeroSection";
 import CallOnAction from "../components/CallToAction";
 // import { motion } from "framer-motion";
-import ServicesSection from "./ServicesSection";
-import Feedback from "./Feedback";
+import ServicesSection from "../sections/ServicesSection";
+import Feedback from "../components/Feedback";
+import MyProjects from "../sections/MyProject";
+import MySkills from "../sections/MySkills";
+// import ContactMe from "./ContactMe";
 
 const Home = () => {
   // useEffect(() => {
@@ -17,13 +20,33 @@ const Home = () => {
 
   return (
     <div className="bg-color">
-      <HeroSection />
+      <section id="home">
+        <HeroSection  />
+      </section>
+
+      
+
+      <section id="projects">
+        <MyProjects />
+      </section>
+
      
-      <hr />
-      <ServicesSection />
-      <hr />
-      <CallOnAction />
-      {/* <Feedback/> */}
+
+      <section id="skills">
+        <MySkills />
+      </section>
+
+     
+
+      <section id="services">
+        <ServicesSection />
+      </section>
+
+     
+
+      <section id="contact">
+        <CallOnAction />
+      </section>
     </div>
   );
 };

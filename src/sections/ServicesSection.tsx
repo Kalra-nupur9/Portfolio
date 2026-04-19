@@ -101,7 +101,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section ref={ref} className="bg-color px-4 py-20">
+    <section ref={ref} className="bg-color-sec1and2 px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <motion.div
           variants={containerVariants}
@@ -110,11 +110,12 @@ const ServicesSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={headerVariants} className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-bold text-gray-900 uppercase md:text-7xl">
+            <div className="all-badge">Services</div>
+            <h2 className="mb-6 text-4xl font-bold text-white uppercase md:text-7xl">
               What I Can Do
               <span className="h5 ps-3"> For You</span>
             </h2>
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-600">
+            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-400">
               I specialize in creating exceptional digital experiences that help businesses grow
               online. From custom designs to full-stack development, I've got you covered.
             </p>
@@ -133,7 +134,7 @@ const ServicesSection = () => {
                   y: -8,
                   transition: { duration: 0.2 },
                 }}
-                className="group relative transform rounded-2xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl"
+                className="group relative transform rounded-2xl border border-gray-800 hover:border-main-color  bg-bg3 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl"
               >
                 {/* Gradient Background on Hover */}
                 <div
@@ -149,10 +150,10 @@ const ServicesSection = () => {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-blue-dark mb-3 text-lg group-hover:text-gray-800 sm:text-3xl">
+                  <h3 className="text-white mb-3 text-lg group- sm:text-3xl">
                     {service.title}
                   </h3>
-                  <p className="leading-relaxed text-gray-600 group-hover:text-gray-700">
+                  <p className="leading-relaxed text-gray-400 group-hover:text-gray-500">
                     {service.description}
                   </p>
                 </div>
@@ -161,11 +162,11 @@ const ServicesSection = () => {
           </motion.div>
 
           {/* Call to Action */}
-          <motion.div
+          {/* <motion.div
             variants={ctaVariants}
             className="mt-16 flex flex-col items-center justify-center"
           >
-            <p className="text-center text-lg text-gray-600">Wan to Know more?</p>
+            <p className="text-center text-xl text-gray-600 mb-2">Want to Know more?</p>
 
             <Link to="/contactme" className="btn btn-blue flex items-center justify-center">
               CLICK HERE
@@ -178,7 +179,7 @@ const ServicesSection = () => {
                 ></path>
               </svg>
             </Link>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

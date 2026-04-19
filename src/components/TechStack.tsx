@@ -24,49 +24,55 @@ import {
 import { TbBrandVite } from "react-icons/tb";
 
 import { motion } from "framer-motion";
-
+import LogoLoop from "./LogoLoop";
 interface TechItem {
   name: string;
   icon: JSX.Element;
 }
 
 const TechStack: React.FC = () => {
-  const techStack: TechItem[] = [
-    { name: "Next.js", icon: <SiNextdotjs className="text-6xl text-black" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-6xl text-green-600" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-6xl text-green-500" /> },
-    { name: "React", icon: <FaReact className="text-6xl text-blue-400" /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-6xl text-blue-800" /> },
-    { name: "Git", icon: <FaGitAlt className="text-6xl text-orange-500" /> },
-    { name: "GitHub", icon: <FaGithub className="text-6xl text-gray-800" /> },
-    { name: "Express", icon: <SiExpress className="text-6xl text-gray-500" /> },
-    { name: "Tailwind", icon: <SiTailwindcss className="text-6xl text-cyan-300" /> },
-    { name: "Bootstrap", icon: <SiBootstrap className="text-6xl text-indigo-500" /> },
-    { name: "Vite", icon: <TbBrandVite className="text-6xl text-purple-600" /> },
-    { name: "Vercel", icon: <SiVercel className="text-6xl text-black" /> },
-    { name: "Figma", icon: <SiFigma className="text-main-red text-6xl" /> },
-    { name: "HTML", icon: <FaHtml5 className="text-6xl text-orange-600" /> },
-    { name: "CSS", icon: <FaCss3Alt className="text-6xl text-blue-500" /> },
-    { name: "JavaScript", icon: <FaJs className="text-6xl text-yellow-500" /> },
-    { name: "Render", icon: <SiRender className="text-6xl text-black" /> },
-    { name: "Wordpress", icon: <FaWordpress className="text-wordpress-blue text-6xl" /> },
-  ];
+  const logos = [
+  { node: <SiNextdotjs className="text-5xl text-black" />, title: "Next.js" },
+  { node: <SiMongodb className="text-5xl text-green-500" />, title: "MongoDB" },
+  { node: <FaNodeJs className="text-5xl text-green-400" />, title: "Node.js" },
+  { node: <FaReact className="text-5xl text-cyan-400" />, title: "React" },
+  { node: <SiTypescript className="text-5xl text-blue-600" />, title: "TypeScript" },
+  { node: <FaGitAlt className="text-5xl text-orange-500" />, title: "Git" },
+  { node: <FaGithub className="text-5xl text-purple-700" />, title: "GitHub" },
+  { node: <SiExpress className="text-5xl text-gray-400" />, title: "Express" },
+  { node: <SiTailwindcss className="text-5xl text-cyan-300" />, title: "Tailwind" },
+  { node: <SiBootstrap className="text-5xl text-purple-500" />, title: "Bootstrap" },
+  { node: <TbBrandVite className="text-5xl text-purple-400" />, title: "Vite" },
+  { node: <SiVercel className="text-5xl text-purple-900" />, title: "Vercel" },
+  { node: <SiFigma className="text-5xl text-pink-500" />, title: "Figma" },
+  { node: <FaHtml5 className="text-5xl text-orange-500" />, title: "HTML" },
+  { node: <FaCss3Alt className="text-5xl text-blue-500" />, title: "CSS" },
+  { node: <FaJs className="text-5xl text-yellow-400" />, title: "JavaScript" },
+  { node: <SiRender className="text-5xl text-black" />, title: "Render" },
+  { node: <FaWordpress className="text-5xl text-blue-400" />, title: "WordPress" },
+  { node: <SiRedux className="text-5xl text-purple-400 " />, title: "Redux" },
+];
 
   return (
-    <div className="tech-stack">
-      <div className="stack">
-        {techStack.map((tech, index) => (
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div key={index} className="icon-div">
-              {tech.icon}
-              <p className="para">{tech.name}</p>
-            </div>
-          </motion.div>
-        ))}
+    <div className=" w-full overflow-hidden ">
+      <div className="relative ">
+        {/* glow */}
+        <div className="absolute inset-0 bg-bg3"></div>
+
+        <div className="relative z-10">
+           <LogoLoop
+        logos={logos}
+        speed={90}
+        direction="left"
+        logoHeight={70}
+        gap={75}
+        hoverSpeed={30}
+        scaleOnHover
+        fadeOut
+        fadeOutColor="#0b0b0f"
+        ariaLabel="Technology partners"
+      />
+        </div>
       </div>
     </div>
   );

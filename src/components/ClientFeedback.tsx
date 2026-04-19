@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Carousel, CarouselResponsiveOption } from "primereact/carousel";
 import { Tag } from "primereact/tag";
-import Feedback from "../Pages/AddFeedback";
+import Feedback from "../../AddFeedback";
 
 
 interface Feedback {

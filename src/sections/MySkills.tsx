@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const MySkills = () => {
   return (
     <>
-      <div className="bg-color">
+      <div className="bg-color p-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -11,8 +11,8 @@ const MySkills = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="skills-container">
-            <div className="place-self-center lg:col-span-7">
-              {/* Left Section */}
+            <div className="">
+              {/* skill details */}
               <div>
                 <div className="mb-10">
                   <motion.div
@@ -20,10 +20,13 @@ const MySkills = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <h1 className="h1">MY TECH STACK</h1>
+                    <h1 className="text-4xl text-center font-semibold text-white uppercase sm:text-5xl md:text-6xl">Where <span className="text-main-color"> Design</span> Meets <span className="text-cyan-color"> Development</span></h1>
 
-                    <h2 className="h2">AND ME</h2>
-                    <h3 className="h3">Blending Design & Development for Seamless Solutions</h3>
+                    
+                    
+                    <div className="mt-3 flex justify-center">
+                      <div className="h-[3px] w-16 animate-pulse rounded-full bg-gradient-to-r from-purple-500 to-cyan-400"></div>
+                    </div>
                   </motion.div>
                 </div>
                 <motion.div
@@ -55,12 +58,14 @@ const MySkills = () => {
                 </motion.div>
               </div>
             </div>
-            {/* Right Section */}
+            
 
-            <TechStack />
+           
           </div>
+          
         </motion.div>
       </div>
+      <TechStack/>
     </>
   );
 };

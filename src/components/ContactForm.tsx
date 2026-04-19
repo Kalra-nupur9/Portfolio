@@ -161,7 +161,7 @@ const ContactForm = () => {
         <div className="btn-div">
           <button
             type="submit"
-            className="btn btn-blue"
+            className="btn btn-red"
             disabled={isSubmitting}
             style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? "not-allowed" : "pointer" }}
           >
