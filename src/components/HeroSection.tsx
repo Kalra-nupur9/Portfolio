@@ -35,12 +35,12 @@ const HeroSection = () => {
   return (
     <div className="relative bg-color min-h-screen flex items-center justify-center overflow-hidden px-6">
 
-      {/* 🔥 BACKGROUND ANIMATION */}
+      {/* BACKGROUND ANIMATION */}
       <div className="absolute inset-0 z-0">
         <FloatingLines />
       </div>
 
-      {/* 🔥 CONTENT */}
+      {/* CONTENT */}
       <div className="relative z-10 text-center max-w-3xl">
 
         {/* Badge */}
@@ -95,7 +95,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* 🔥 MODAL */}
+      {/*MODAL */}
       {openContact && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"

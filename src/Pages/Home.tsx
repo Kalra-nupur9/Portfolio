@@ -37,7 +37,7 @@ const Home = () => {
       {showTopBtn && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed right-6 bottom-6 z-50 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 p-3 text-white shadow-lg transition duration-300 hover:scale-110"
+          className="fixed right-6 bottom-6 z-50 rounded-full bg-main-color p-3 text-white shadow-lg transition duration-300 hover:scale-110"
         >
           ↑
         </button>
