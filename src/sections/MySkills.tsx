@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const MySkills = () => {
   return (
     <>
-      <div className="bg-color p-20">
+      <div className="bg-color p-5 sm:p-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

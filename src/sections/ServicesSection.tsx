@@ -115,7 +115,7 @@ const ServicesSection = () => {
               What I Can Do
               <span className="h5 ps-3"> For You</span>
             </h2>
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-400">
+            <p className="mx-auto max-w-3xl text-base sm:text-lg leading-relaxed text-gray-400">
               I specialize in creating exceptional digital experiences that help businesses grow
               online. From custom designs to full-stack development, I've got you covered.
             </p>

@@ -290,7 +290,7 @@ hr {
 }
 
 .project-Sr-No {
-  @apply bg-primary absolute top-2 left-2 rounded-full px-4 py-2 text-xl text-white;
+  @apply bg-card-bg absolute top-2 left-2 rounded-full px-4 py-2 text-xl text-white;
 }
 .h3-project {
   @apply text-2xl text-white;
