@@ -149,10 +149,10 @@
   @apply cursor-pointer text-base text-gray-400 hover:text-cyan-400;
 }
 .media-nav-items {
-  @apply border-main-red/15 flex items-center gap-2 border bg-pink-100 px-5 py-4 text-base font-medium text-gray-400;
+  @apply  flex  gap-2   px-5  py-4 text-base font-medium text-main-color;
 }
 .toggle-btn {
-  @apply inline-flex items-center justify-center rounded-md p-2 text-black;
+  @apply inline-flex items-center justify-center rounded-md p-2 text-main-color;
 }
 
 /* footer */

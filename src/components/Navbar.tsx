@@ -77,7 +77,7 @@ function Navbar() {
           isClick ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="w-full -space-y-1 px-4 pt-2 pb-4">
+        <div className="w-full  -space-y-1 px-4 pt-2 pb-4">
           <a href="#home" className="media-nav-items" onClick={() => setisClick(false)}>
             Home
           </a>
