@@ -1,5 +1,6 @@
 // import  { useEffect } from 'react';
 // import { toast } from 'react-toastify';
+import { useState, useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import CallOnAction from "../components/CallToAction";
 // import { motion } from "framer-motion";
@@ -17,32 +18,45 @@ const Home = () => {
   //     sessionStorage.setItem("welcomeToastShown", "true");
   //   }
   // }, []);
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="bg-color">
+      {showTopBtn && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed right-6 bottom-6 z-50 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 p-3 text-white shadow-lg transition duration-300 hover:scale-110"
+        >
+          ↑
+        </button>
+      )}
       <section id="home">
-        <HeroSection  />
+        <HeroSection />
       </section>
-
-      
 
       <section id="projects">
         <MyProjects />
       </section>
 
-     
-
       <section id="skills">
         <MySkills />
       </section>
 
-     
-
       <section id="services">
         <ServicesSection />
       </section>
-
-     
 
       <section id="contact">
         <CallOnAction />

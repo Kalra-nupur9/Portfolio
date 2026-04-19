@@ -133,11 +133,12 @@
 }
 
 /* Nav Bar */
-.logo {
+/* .logo {
   @apply tracking-tightest from-main-red bg-linear-to-r to-pink-300 bg-clip-text pr-5 text-8xl text-transparent hover:text-pink-500;
-}
+} */
 .nav-bar {
-  @apply flex h-16 items-center justify-between ;
+  @apply flex items-center justify-between px-6 py-1 rounded-2xl
+  bg-white/10 backdrop-blur-xl border border-white/20 ;
 }
 .nav-space {
   @apply mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8;
@@ -146,10 +147,11 @@
   @apply ml-4 flex items-center justify-end space-x-10;
 }
 .nav-item {
-  @apply cursor-pointer text-base text-gray-400 hover:text-cyan-400;
+  @apply cursor-pointer text-sm text-gray-300 
+  hover:text-white transition duration-300;
 }
 .media-nav-items {
-  @apply  flex  gap-2   px-5  py-4 text-base font-medium text-main-color;
+  @apply  flex  gap-2   px-5  py-4 text-base font-medium text-white;
 }
 .toggle-btn {
   @apply inline-flex items-center justify-center rounded-md p-2 text-main-color;
@@ -207,7 +209,7 @@
 }
 
 .h5 {
-  @apply from-main-color to-cyan-color inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
+  @apply from-white to-main-color inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
 }
 
 .typed {

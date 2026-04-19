@@ -1,17 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
-import dots from "../assets/images/userAsset/dots.png";
-import cube from "../assets/images/userAsset/cube.png";
-import circle from "../assets/images/userAsset/circle.png";
-import zigzags from "../assets/images/userAsset/zigzags.png";
-import CV from "../assets/PDF/NK-CV.pdf";
-import plus from "../assets/images/userAsset/plus.png";
-import programming from "../assets/images/userAsset/Programming.gif";
-import { Link } from "react-router-dom";
 import { FaCircle } from "react-icons/fa";
-import { useState } from "react";
 import ContactDetails from "./ContactDetails";
+import FloatingLines from "./FloatingLines";
+import CV from "../assets/PDF/NK-CV.pdf";
 
 const HeroSection = () => {
   const typedRef = useRef<HTMLDivElement | null>(null);
@@ -35,93 +28,88 @@ const HeroSection = () => {
         showCursor: false,
       });
 
-      // Cleanup on unmount
       return () => typed.destroy();
     }
   }, []);
 
   return (
-    <>
-      <div className="bg-color py-9 sm:py-5">
-        <div className="hero-bg"></div>
-        <div className="hero-bg"></div>
-        <div className="hero-bg"></div>
-        {/* HERO SECTION */}
-        <div className="relative">
-          {/* Faded Text */}
+    <div className="relative bg-color min-h-screen flex items-center justify-center overflow-hidden px-6">
 
-          <div className="hero-content">
-            <div className="introduction-div">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="hero-badge">
-                  <FaCircle className="text-[8px]" />
-                  <span className="text-highlight">Available for Freelance</span>
-                </div>
+      {/* 🔥 BACKGROUND ANIMATION */}
+      <div className="absolute inset-0 z-0">
+        <FloatingLines />
+      </div>
 
-                <h1 className="h1-hero">Hello, I’m</h1>
-                <h5 className="h5">NUPUR KALRA</h5>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="typed" ref={typedRef}></div>
-              </motion.div>
+      {/* 🔥 CONTENT */}
+      <div className="relative z-10 text-center max-w-3xl">
 
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <p className="para max-w-2xl">
-                  Welcome to my professional portfolio! Here, you can explore my journey as a
-                  software developer, discover the skills I bring to the table, and see the projects
-                  I’ve worked on. Feel free to reach out and connect !
-                </p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="flex flex-col gap-2 py-5 sm:flex-row">
-                  <button onClick={() => setOpenContact(true)} className="btn btn-red">
-                    Contact Me →
-                  </button>
-                  {openContact && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm">
-                      {/* ✅ NO dark container here */}
-                      <div className="w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
-                        <ContactDetails onClose={() => setOpenContact(false)} />
-                      </div>
-                    </div>
-                  )}
-                  <a href={CV} download className="btn btn-white">
-                    Download CV
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-            <div className="poster-div">
-              {/* Floating Icons */}
-              <img src={dots} alt="dots" className="dots absolute" />
-              <img src={cube} alt="cube" className="cube absolute" />
-              <img src={circle} alt="circle" className="circle absolute" />
-              <img src={zigzags} alt="zigzag" className="zigzags absolute" />
-              <img src={plus} alt="plus" className="plus absolute" />
+        {/* Badge */}
+        <div className="hero-badge mx-auto mb-4 justify-center">
+          <FaCircle className="text-[8px]" />
+          <span className="text-highlight">Available for Freelance</span>
+        </div>
 
-              {/* Background Image */}
-              <img src={programming} alt="Programming" className="duranion-1000 poster" />
-            </div>
-          </div>
+        {/* Heading */}
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-white"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Hello, I’m
+        </motion.h1>
+
+        <motion.h2
+          className="h5"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          NUPUR KALRA
+        </motion.h2>
+
+        {/* Typed Text */}
+        <div
+          ref={typedRef}
+          className="mt-4 text-xl md:text-2xl text-white font-medium min-h-[32px]"
+        ></div>
+
+        {/* Description */}
+        <p className="mt-6 text-gray-100 leading-relaxed">
+          I build modern, scalable, and user-focused web applications with a strong
+          emphasis on performance and design.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center">
+
+          <button
+            onClick={() => setOpenContact(true)}
+            className="btn btn-red"
+          >
+            Contact Me →
+          </button>
+
+          <a href={CV} download className="btn btn-white">
+            Download CV
+          </a>
+
         </div>
       </div>
-    </>
+
+      {/* 🔥 MODAL */}
+      {openContact && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          onClick={() => setOpenContact(false)}
+        >
+          <div
+            className="w-full max-w-6xl max-h-[90vh] overflow-y-auto "
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ContactDetails onClose={() => setOpenContact(false)} />
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
