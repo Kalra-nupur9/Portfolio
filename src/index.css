@@ -21,7 +21,7 @@
   --color-bg2: #12121a;
   --color-bg3: #1a1a28;
   --color-card: rgba(255, 255, 255, 0.03);
-  --color-highlight: #F59E0B;
+  --color-highlight: #f59e0b;
 
   --tracking-tightest_2: -0.3em;
   --tracking-tightest: -0.2em;
@@ -46,19 +46,19 @@
   @apply bg-bg-main;
 }
 .bg-color-sec1and2 {
-  @apply bg-bg2 ;
+  @apply bg-bg2;
 }
 .heading-section {
-  @apply py-4 text-center ;
+  @apply py-4 text-center;
 }
 .hero-badge {
-  @apply mb-6 inline-flex animate-[fadeUp_0.6s_ease_both] items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-1 text-xs tracking-widest text-highlight uppercase;
+  @apply mb-6 inline-flex animate-[fadeUp_0.6s_ease_both] items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-1 text-xs tracking-widest text-green-500 uppercase;
 }
 .all-badge {
-  @apply mb-6 inline-flex animate-[fadeUp_0.6s_ease_both] items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1 text-xs tracking-widest text-cyan-color uppercase;
+  @apply text-cyan-color mb-6 inline-flex animate-[fadeUp_0.6s_ease_both] items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1 text-xs tracking-widest uppercase;
 }
 .cta-badge {
-  @apply mb-6 inline-flex animate-[fadeUp_0.6s_ease_both] items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-1 text-xs tracking-widest text-highlight uppercase;
+  @apply mb-6 inline-flex animate-[fadeUp_0.6s_ease_both] items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-1 text-xs tracking-widest text-green-500 uppercase;
 }
 .badge-dot {
   width: 6px;
@@ -69,8 +69,7 @@
 }
 
 .hero-bg {
-  @apply absolute inset-0 pointer-events-none
-         bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,rgba(124,58,237,0.12)_0%,transparent_70%),radial-gradient(ellipse_40%_40%_at_20%_80%,rgba(6,182,212,0.08)_0%,transparent_60%)];
+  @apply pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,rgba(124,58,237,0.12)_0%,transparent_70%),radial-gradient(ellipse_40%_40%_at_20%_80%,rgba(6,182,212,0.08)_0%,transparent_60%)];
 }
 .h1 {
   @apply text-4xl font-semibold text-white uppercase sm:text-6xl md:text-7xl;
@@ -79,7 +78,7 @@
   @apply text-text-main text-3xl sm:text-4xl md:text-5xl;
 }
 .h2-Light {
-  @apply bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl;
+  @apply bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-3xl text-transparent sm:text-4xl md:text-5xl;
 }
 .h3 {
   @apply text-cyan-color text-3xl;
@@ -137,24 +136,22 @@
   @apply tracking-tightest from-main-red bg-linear-to-r to-pink-300 bg-clip-text pr-5 text-8xl text-transparent hover:text-pink-500;
 } */
 .nav-bar {
-  @apply flex items-center justify-between px-6 py-1 rounded-2xl
-  bg-white/10 backdrop-blur-xl border border-white/20 ;
+  @apply flex items-center justify-between rounded-2xl border border-white/20 bg-white/10 px-5 py-1 backdrop-blur-xl;
 }
 .nav-space {
-  @apply mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-7xl ;
 }
 .nav-menu {
   @apply ml-4 flex items-center justify-end space-x-10;
 }
 .nav-item {
-  @apply cursor-pointer text-sm text-gray-300 
-  hover:text-white transition duration-300;
+  @apply cursor-pointer text-sm text-gray-300 transition duration-300 hover:text-main-color;
 }
 .media-nav-items {
-  @apply  flex  gap-2   px-5  py-4 text-base font-medium text-white;
+  @apply flex gap-2 px-5 py-4 text-base font-medium text-white;
 }
 .toggle-btn {
-  @apply inline-flex items-center justify-center rounded-md p-2 text-main-color;
+  @apply text-main-color inline-flex items-center justify-center rounded-md p-2;
 }
 
 /* footer */
@@ -209,7 +206,7 @@
 }
 
 .h5 {
-  @apply from-white to-main-color inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
+  @apply to-main-color inline-block bg-gradient-to-r from-cyan-color bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
 }
 
 .typed {
@@ -262,7 +259,7 @@ hr {
   @apply mt-3 text-2xl text-green-600;
 }
 .quote {
-  @apply text-center text-lg text-cyan-color italic;
+  @apply text-cyan-color text-center text-lg italic;
 }
 
 /* ClientFeedback.tsx*/
@@ -288,7 +285,7 @@ hr {
   @apply grid gap-10 p-5 sm:grid-cols-2 sm:px-15 md:grid-cols-3;
 }
 .project-card {
-  @apply border-cyan-900 hover:-translate-y-[2px] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:border-accent bg-card-bg relative flex h-full flex-col overflow-hidden rounded-2xl border shadow-lg transition-transform duration-500 hover:scale-105;
+  @apply hover:border-accent bg-card-bg relative flex h-full flex-col overflow-hidden rounded-2xl border border-cyan-900 shadow-lg transition-transform duration-500 hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_0_25px_rgba(6,182,212,0.4)];
 }
 
 .project-Sr-No {
@@ -312,9 +309,6 @@ hr {
 .skills-container {
   @apply w-full;
 }
-
-
-
 
 /* FAQs */
 .accordion-tab {
@@ -359,16 +353,16 @@ hr {
 /* h3 Forms */
 
 .contact-div {
-  @apply mx-auto flex w-full flex-col rounded-3xl bg-bg3  sm:w-[90%] sm:flex-row shadow-[0_0_80px_rgba(124,58,237,0.4)];
+  @apply bg-bg3 mx-auto flex w-full flex-col rounded-3xl shadow-[0_0_80px_rgba(124,58,237,0.4)] sm:w-[90%] sm:flex-row;
 }
 .detail-box {
-  @apply to-bg3  from-main-color flex w-full flex-col justify-between gap-15 rounded-3xl bg-linear-to-br p-3 sm:w-[50%] sm:p-8;
+  @apply to-bg3 from-main-color flex w-full flex-col justify-between gap-15 rounded-3xl bg-linear-to-br p-3 sm:w-[50%] sm:p-8;
 }
 .detail-heading {
   @apply text-pink-light text-3xl sm:text-4xl;
 }
 .contact-icon {
-  @apply bg-purple-300/30 text-pink-light rounded-full p-1 text-3xl sm:p-2 sm:text-4xl;
+  @apply text-pink-light rounded-full bg-purple-300/30 p-1 text-3xl sm:p-2 sm:text-4xl;
 }
 .contact-detail {
   @apply flex flex-col items-center sm:flex-row;
@@ -381,7 +375,7 @@ hr {
   @apply text-base font-medium text-white;
 }
 .input-form {
-  @apply  w-full placeholder:text-white/20 bg-white/5 backdrop-blur-sm rounded-lg border border-purple-400/30 px-4 py-2 focus:ring-1 focus:ring-accent;
+  @apply focus:ring-accent w-full rounded-lg border border-purple-400/30 bg-white/5 px-4 py-2 backdrop-blur-sm placeholder:text-white/20 focus:ring-1;
 }
 
 .error-container {
@@ -398,7 +392,7 @@ section {
 
 @theme inline {
   --font-heading: var(--font-sans);
-  --font-sans: 'Geist Variable', sans-serif;
+  --font-sans: "Geist Variable", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

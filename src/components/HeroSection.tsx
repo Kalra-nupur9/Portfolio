@@ -46,7 +46,7 @@ const HeroSection = () => {
         {/* Badge */}
         <div className="hero-badge mx-auto mb-4 justify-center">
           <FaCircle className="text-[8px]" />
-          <span className="text-highlight">Available for Freelance</span>
+          <span className="text-green-500">Available for Freelance</span>
         </div>
 
         {/* Heading */}
@@ -59,7 +59,10 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.h2
-          className="h5"
+          className="text-4xl md:text-6xl font-extrabold mt-2 
+bg-gradient-to-r from-cyan-color via-purple-400 to-main-color 
+bg-clip-text text-transparent 
+drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
         >

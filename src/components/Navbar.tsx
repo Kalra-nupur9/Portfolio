@@ -36,7 +36,7 @@ function Navbar() {
         <div className="nav-bar">
           <Link to="/" className=" ">
             {/* <img src={LogoImage} alt="" className="w-40" /> */}
-            <h3 className="h5 w-40 tracking-wide">NK.</h3>
+            <h3 className="h5 tracking-wide">NK.</h3>
           </Link>
 
           <div className="hidden w-3/4 md:block">
