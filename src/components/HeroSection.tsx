@@ -33,16 +33,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative bg-color min-h-screen flex items-center justify-center overflow-hidden px-6">
-
+    <div className="bg-color relative flex min-h-screen items-center justify-center overflow-hidden px-6">
       {/* BACKGROUND ANIMATION */}
       <div className="absolute inset-0 z-0">
         <FloatingLines />
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 text-center max-w-3xl">
-
+      <div className="relative z-10 max-w-4xl text-center">
         {/* Badge */}
         <div className="hero-badge mx-auto mb-4 justify-center">
           <FaCircle className="text-[8px]" />
@@ -51,7 +49,7 @@ const HeroSection = () => {
 
         {/* Heading */}
         <motion.h1
-          className="text-4xl md:text-6xl font-bold text-white"
+          className="text-4xl font-bold text-white md:text-6xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -59,10 +57,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.h2
-          className="text-4xl md:text-6xl font-extrabold mt-2 
-bg-gradient-to-r from-cyan-color via-purple-400 to-main-color 
-bg-clip-text text-transparent 
-drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]"
+          className="from-cyan-color to-main-color mt-2 bg-gradient-to-r via-purple-400 bg-clip-text text-4xl font-extrabold text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)] md:text-8xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -72,40 +67,35 @@ drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]"
         {/* Typed Text */}
         <div
           ref={typedRef}
-          className="mt-4 text-xl md:text-2xl text-white font-medium min-h-[32px]"
+          className="mt-4 min-h-[32px] text-xl font-medium text-white md:text-2xl"
         ></div>
 
         {/* Description */}
-        <p className="mt-6 text-gray-100 leading-relaxed">
-          I build modern, scalable, and user-focused web applications with a strong
-          emphasis on performance and design.
+        <p className="mt-6 leading-relaxed text-gray-100">
+          I build modern, scalable, and user-focused web applications with a strong emphasis on
+          performance and design.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center">
-
-          <button
-            onClick={() => setOpenContact(true)}
-            className="btn btn-red"
-          >
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <button onClick={() => setOpenContact(true)} className="btn btn-red">
             Contact Me →
           </button>
 
           <a href={CV} download className="btn btn-white">
             Download CV
           </a>
-
         </div>
       </div>
 
       {/*MODAL */}
       {openContact && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm"
           onClick={() => setOpenContact(false)}
         >
           <div
-            className="w-full max-w-6xl max-h-[90vh] overflow-y-auto "
+            className="max-h-[90vh] w-full max-w-6xl overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <ContactDetails onClose={() => setOpenContact(false)} />

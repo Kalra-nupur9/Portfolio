@@ -5,11 +5,11 @@ import { FaCloud } from "react-icons/fa";
 
 const NotFound = () => {
   return (
-    <div className="relative bg-color ">
+    <div className="relative bg-color h-screen ">
       {/* Background Icons */}
-      <PiBracketsCurlyBold className="absolute text-main-red opacity-30 w-24 h-24 md:w-32 md:h-32 top-10 left-10" />
-      <IoCodeSlashSharp className="absolute text-main-red opacity-30 w-24 h-24 md:w-32 md:h-32 bottom-10 right-10" />
-      <FaCloud className="absolute text-main-red opacity-30 w-24 h-24 md:w-32 md:h-32 top-1/3 left-3/6" />
+      <PiBracketsCurlyBold className="absolute text-main-color opacity-30 w-24 h-24 md:w-32 md:h-32 top-10 left-10" />
+      <IoCodeSlashSharp className="absolute text-main-color opacity-30 w-24 h-24 md:w-32 md:h-32 bottom-10 right-10" />
+      <FaCloud className="absolute text-main-color opacity-30 w-24 h-24 md:w-32 md:h-32 top-1/3 left-3/6" />
 
       {/* Content */}
       <div className="error-container">

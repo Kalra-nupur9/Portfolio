@@ -3,10 +3,10 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
-@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-bg-main: #0b0b0f;
+
   --color-card-bg: #fed4d9;
   --color-main-red: #ff5c8d;
   --color-blue-dark: #432dd7;
@@ -18,11 +18,11 @@
   --color-cyan-color: #06b6d4;
   --color-text-main: #e5e7eb;
   --color-text-muted: #9ca3af;
-  --color-bg2: #12121a;
-  --color-bg3: #1a1a28;
+  --color-bg2: #220c27;
+  --color-bg3: #161d40;
   --color-card: rgba(255, 255, 255, 0.03);
   --color-highlight: #f59e0b;
-
+  
   --tracking-tightest_2: -0.3em;
   --tracking-tightest: -0.2em;
   --tracking-tighter: -0.05em;
@@ -35,12 +35,20 @@
   --font-globle: "Syne", sans-serif;
 
   --font-body: "DM Sans", sans-serif;
+
+  
 }
+
+
+
 
 * {
   @apply font-globle;
 }
-
+.gradient-border {
+  position: relative;
+  background: var(--glass-bg);
+}
 /* BackGround color */
 .bg-color {
   @apply bg-bg-main;
@@ -139,13 +147,13 @@
   @apply flex items-center justify-between rounded-2xl border border-white/20 bg-white/10 px-5 py-1 backdrop-blur-xl;
 }
 .nav-space {
-  @apply mx-auto max-w-7xl ;
+  @apply mx-auto max-w-7xl;
 }
 .nav-menu {
   @apply ml-4 flex items-center justify-end space-x-10;
 }
 .nav-item {
-  @apply cursor-pointer text-sm text-gray-300 transition duration-300 hover:text-main-color;
+  @apply hover:text-main-color cursor-pointer text-sm text-gray-300 transition duration-300;
 }
 .media-nav-items {
   @apply flex gap-2 px-5 py-4 text-base font-medium text-white;
@@ -206,7 +214,7 @@
 }
 
 .h5 {
-  @apply to-main-color inline-block bg-gradient-to-r from-cyan-color bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
+  @apply to-main-color from-cyan-color inline-block bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent sm:text-7xl md:text-7xl;
 }
 
 .typed {
@@ -379,11 +387,11 @@ hr {
 }
 
 .error-container {
-  @apply flex flex-col items-center space-y-6 py-28 text-center;
+  @apply flex flex-col items-center space-y-10 py-52 text-center;
 }
 
 .error-404 {
-  @apply text-main-red text-7xl font-bold md:text-9xl;
+  @apply text-main-color text-7xl font-bold md:text-9xl;
 }
 
 section {

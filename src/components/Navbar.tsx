@@ -10,17 +10,38 @@ function Navbar() {
   const [isClick, setisClick] = useState(false);
   const [showNav, setShowNav] = useState(true);
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowNav(false); // hide
-      } else {
-        setShowNav(true); // show
-      }
-    };
+  let lastScrollY = window.scrollY;
+  let timeout: ReturnType<typeof setTimeout>;
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    // 👉 scrolling UP
+    if (currentScrollY < lastScrollY) {
+      setShowNav(true);
+
+      // reset timer
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        setShowNav(false);
+      }, 5000);
+    } 
+    // 👉 scrolling DOWN
+    else if (currentScrollY > lastScrollY) {
+      setShowNav(false);
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    clearTimeout(timeout);
+  };
+}, []);
 
   const ToggleNavMenu = () => {
     setisClick(!isClick);
