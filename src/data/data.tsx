@@ -21,42 +21,8 @@ interface Project {
 
 // Project Data
 export const projects: Project[] = [
-  {
+   {
     id: 1,
-    name: "Immizest Website",
-    description:
-      "An interactive website for Immizest showcasing there cources and attract new student to get in contact with them via website. Link: https://immizest.com/",
-    image: immizest,
-
-    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
-  },
-
-  {
-    id: 2,
-    name: "Pcsudbury Business Website",
-    description:
-      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
-    image: pcsudbury,
-    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
-  },
-  {
-    id: 3,
-    name: "WCTR Business Website",
-    description:
-      "An interactive website for WCTR college showcasing there cources and attract new student to get in contact with them via website. Link: https://wctrc.com/",
-    image: wctr,
-    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
-  },
-  {
-    id: 4,
-    name: "NSW Business Website",
-    description:
-      "An interactive website for Northern Steel Works showcasing there Services and attract new Clients to get in contact with them via website.",
-    image: nsw,
-    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
-  },
-  {
-    id: 5,
     name: "Tech Set Go",
     description:
       "Tech Set Go: Next.JS project , Created Website design using Figma and implemented design in Next.JS using Bootstrap Framework ,Custom CSS, Node.JS,Express.js and MongoDB",
@@ -79,16 +45,9 @@ export const projects: Project[] = [
       "JavaScript",
     ],
   },
+ 
   {
-    id: 6,
-    name: "Doc Master",
-    description:
-      "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
-    image: docMaster,
-    techStack: ["HTML", "Figma", "CSS", "JavaScript", "Bootstrap", "React", "Tailwind CSS"],
-  },
-  {
-    id: 7,
+    id: 2,
     name: "My Portfolio ",
     description:
       "A full-stack portfolio website to showcase my work and skills. Built with React and TypeScript, styled using Tailwind CSS, and powered by a Node.js + Express backend with MongoDB. Deployed on Vercel and Render.",
@@ -111,7 +70,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 3,
     name: "Password Manager",
     description:
       "Created Password Manager Website using React.Js, TailwindCSS, Node.JS and MongoDB.",
@@ -131,7 +90,50 @@ export const projects: Project[] = [
       "GitHub",
     ],
   },
+   {
+    id: 4,
+    name: "Doc Master",
+    description:
+      "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
+    image: docMaster,
+    techStack: ["HTML", "Figma", "CSS", "JavaScript", "Bootstrap", "React", "Tailwind CSS"],
+  },
+  
   {
+    id: 5,
+    name: "Immizest Website",
+    description:
+      "An interactive website for Immizest showcasing there cources and attract new student to get in contact with them via website. Link: https://immizest.com/",
+    image: immizest,
+
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
+  },
+
+  {
+    id: 6,
+    name: "Pcsudbury Business Website",
+    description:
+      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
+    image: pcsudbury,
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
+  },
+  {
+    id: 7,
+    name: "WCTR Business Website",
+    description:
+      "An interactive website for WCTR college showcasing there cources and attract new student to get in contact with them via website. Link: https://wctrc.com/",
+    image: wctr,
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
+  },
+  {
+    id: 8,
+    name: "NSW Business Website",
+    description:
+      "An interactive website for Northern Steel Works showcasing there Services and attract new Clients to get in contact with them via website.",
+    image: nsw,
+    techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
+  },
+ {
     id: 9,
     name: "Password Generator",
     description:
