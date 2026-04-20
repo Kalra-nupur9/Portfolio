@@ -10,45 +10,45 @@ function Navbar() {
   const [isClick, setisClick] = useState(false);
   const [showNav, setShowNav] = useState(true);
   useEffect(() => {
-  let lastScrollY = window.scrollY;
-  let timeout: ReturnType<typeof setTimeout>;
+    let lastScrollY = window.scrollY;
+    let timeout: ReturnType<typeof setTimeout>;
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    // ✅ ALWAYS SHOW ON HOME
-    if (currentScrollY < 100) {
-      setShowNav(true);
-      clearTimeout(timeout);
-      return;
-    }
+      // ✅ ALWAYS SHOW ON HOME
+      if (currentScrollY < 100) {
+        setShowNav(true);
+        clearTimeout(timeout);
+        return;
+      }
 
-    // 🔼 scrolling UP
-    if (currentScrollY < lastScrollY) {
-      setShowNav(true);
+      // 🔼 scrolling UP
+      if (currentScrollY < lastScrollY) {
+        setShowNav(true);
 
-      clearTimeout(timeout);
+        clearTimeout(timeout);
 
-      timeout = setTimeout(() => {
+        timeout = setTimeout(() => {
+          setShowNav(false);
+        }, 5000);
+      }
+
+      // 🔽 scrolling DOWN
+      else if (currentScrollY > lastScrollY) {
         setShowNav(false);
-      }, 5000);
-    }
+      }
 
-    // 🔽 scrolling DOWN
-    else if (currentScrollY > lastScrollY) {
-      setShowNav(false);
-    }
+      lastScrollY = currentScrollY;
+    };
 
-    lastScrollY = currentScrollY;
-  };
+    window.addEventListener("scroll", handleScroll);
 
-  window.addEventListener("scroll", handleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    clearTimeout(timeout);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const ToggleNavMenu = () => {
     setisClick(!isClick);
@@ -64,8 +64,9 @@ function Navbar() {
         <div className="nav-bar">
           <Link to="/" className=" ">
             {/* <img src={LogoImage} alt="" className="w-40" /> */}
-            <h3 className="to-main-color from-cyan-color inline-block bg-gradient-to-l bg-clip-text text-2xl font-semibold text-transparent sm:text-2xl md:text-2xl;
-">NUPUR KALRA</h3>
+            <h3 className="to-main-color from-cyan-color md:text-2xl; inline-block bg-gradient-to-l bg-clip-text text-2xl font-semibold text-transparent sm:text-2xl">
+              NUPUR KALRA
+            </h3>
           </Link>
 
           <div className="hidden w-3/4 md:block">
@@ -93,8 +94,8 @@ function Navbar() {
               {isClick ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   fill="currentColor"
                   className="bi bi-x"
                   viewBox="0 0 16 16"
@@ -104,8 +105,8 @@ function Navbar() {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   fill="currentColor"
                   className="bi bi-list"
                   viewBox="0 0 16 16"
