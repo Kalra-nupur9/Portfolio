@@ -64,7 +64,8 @@ function Navbar() {
         <div className="nav-bar">
           <Link to="/" className=" ">
             {/* <img src={LogoImage} alt="" className="w-40" /> */}
-            <h3 className="h5 tracking-wide">NK.</h3>
+            <h3 className="to-main-color from-cyan-color inline-block bg-gradient-to-l bg-clip-text text-2xl font-semibold text-transparent sm:text-2xl md:text-2xl;
+">NUPUR KALRA</h3>
           </Link>
 
           <div className="hidden w-3/4 md:block">
