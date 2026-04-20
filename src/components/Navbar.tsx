@@ -16,18 +16,25 @@ function Navbar() {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    // 👉 scrolling UP
+    // ✅ ALWAYS SHOW ON HOME
+    if (currentScrollY < 100) {
+      setShowNav(true);
+      clearTimeout(timeout);
+      return;
+    }
+
+    // 🔼 scrolling UP
     if (currentScrollY < lastScrollY) {
       setShowNav(true);
 
-      // reset timer
       clearTimeout(timeout);
 
       timeout = setTimeout(() => {
         setShowNav(false);
       }, 5000);
-    } 
-    // 👉 scrolling DOWN
+    }
+
+    // 🔽 scrolling DOWN
     else if (currentScrollY > lastScrollY) {
       setShowNav(false);
     }
