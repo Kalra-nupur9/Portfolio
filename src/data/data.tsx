@@ -154,7 +154,7 @@ export const projects: Project[] = [
     description: "An interactive website for a coffee shop with online ordering.",
     image: coffeeshop,
     techStack: [
-      "React",
+      "Next.js",
       "TypeScript",
       "Node.js",
       "Git",
