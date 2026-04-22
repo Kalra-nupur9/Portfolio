@@ -7,7 +7,7 @@ import CallOnAction from "../components/CallToAction";
 import ServicesSection from "../sections/ServicesSection";
 import Feedback from "../components/Feedback";
 import MyProjects from "../sections/MyProject";
-import MySkills from "../sections/MySkills";
+import  AboutMe from "../sections/AboutMe";
 // import ContactMe from "./ContactMe";
 
 const Home = () => {
@@ -50,8 +50,8 @@ const Home = () => {
         <MyProjects />
       </section>
 
-      <section id="skills">
-        <MySkills />
+      <section id="aboutme">
+        <AboutMe/>
       </section>
 
       <section id="services">

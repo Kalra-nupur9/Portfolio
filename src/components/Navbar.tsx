@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import { FaHome } from "react-icons/fa";
 // import { GoProjectRoadmap } from "react-icons/go";
-// import { GiSkills } from "react-icons/gi";
+// import { Giaboutme } from "react-icons/gi";
 // import { RiContactsBook3Line } from "react-icons/ri";
 // import { RiCustomerService2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
@@ -77,8 +77,8 @@ function Navbar() {
               <a href="#projects" className="nav-item">
                 Projects
               </a>
-              <a href="#skills" className="nav-item">
-                Skills
+              <a href="#aboutme" className="nav-item">
+                About Me
               </a>
               <a href="#services" className="nav-item">
                 Services
@@ -133,8 +133,8 @@ function Navbar() {
           <a href="#projects" className="media-nav-items" onClick={() => setisClick(false)}>
             Projects
           </a>
-          <a href="#skills" className="media-nav-items" onClick={() => setisClick(false)}>
-            Skills
+          <a href="#aboutme" className="media-nav-items" onClick={() => setisClick(false)}>
+             About Me
           </a>
           <a href="#services" className="media-nav-items" onClick={() => setisClick(false)}>
             Services
