@@ -94,7 +94,7 @@ export const projects: Project[] = [
     id: 4,
     name: "Doc Master",
     description:
-      "Created a Website design using Figma and Implemented the design using React.js,  Bootstrap Framework ,Custom CSS and Node.js.",
+      "Created a Website design using Figma and Implemented the design using React.js, Bootstrap Framework, Custom CSS and Node.js.",
     image: docMaster,
     techStack: ["HTML", "Figma", "CSS", "JavaScript", "Bootstrap", "React", "Tailwind CSS"],
   },
