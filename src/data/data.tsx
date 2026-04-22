@@ -113,7 +113,7 @@ export const projects: Project[] = [
     id: 6,
     name: "Pcsudbury Business Website",
     description:
-      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: http://pcsudbury.com/",
+      "An interactive Business website for a Powder Coating Services for marketing and lead genration. Link: https://pcsudbury.com/",
     image: pcsudbury,
     techStack: ["HTML", "CSS", "JS", "WORDPRESS", "FIGMA"],
   },
